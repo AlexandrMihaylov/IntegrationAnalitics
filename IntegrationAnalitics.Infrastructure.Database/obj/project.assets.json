@@ -1195,23 +1195,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kosty\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Alexandr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.rider\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
+      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
       "projectName": "IntegrationAnalitics.Infrastructure.Database",
-      "projectPath": "D:\\.rider\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
-      "packagesPath": "C:\\Users\\kosty\\.nuget\\packages\\",
-      "outputPath": "D:\\.rider\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\obj\\",
+      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
+      "packagesPath": "C:\\Users\\Alexandr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Database\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kosty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Alexandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1219,15 +1215,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\.rider\\ContractsSC\\LOCALNUGET\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/45/packages/nuget/index.json": {},
+        "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/52/packages/nuget/index.json": {},
+        "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/79/packages/nuget/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\.rider\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
-              "projectPath": "D:\\.rider\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
+            "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
+              "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
             }
           }
         }
@@ -1257,7 +1255,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1266,7 +1265,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.1.22431.12\\RuntimeIdentifierGraph.json"
       }
     }
   }
