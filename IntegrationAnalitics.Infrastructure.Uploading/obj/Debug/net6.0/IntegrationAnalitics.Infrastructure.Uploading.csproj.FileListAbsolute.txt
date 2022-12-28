@@ -1,0 +1,12 @@
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.deps.json
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.dll
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.pdb
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.csproj.AssemblyReference.cache
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.GeneratedMSBuildEditorConfig.editorconfig
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.AssemblyInfoInputs.cache
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.AssemblyInfo.cs
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.csproj.CoreCompileInputs.cache
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.dll
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\refint\IntegrationAnalitics.Infrastructure.Uploading.dll
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.pdb
+D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Uploading\obj\Debug\net6.0\ref\IntegrationAnalitics.Infrastructure.Uploading.dll

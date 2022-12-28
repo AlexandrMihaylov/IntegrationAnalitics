@@ -1,0 +1,5 @@
+D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics.Api\obj\Debug\net6.0\IntegrationAnalitics.Api.csproj.AssemblyReference.cache
+D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics.Api\obj\Debug\net6.0\IntegrationAnalitics.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics.Api\obj\Debug\net6.0\IntegrationAnalitics.Api.AssemblyInfoInputs.cache
+D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics.Api\obj\Debug\net6.0\IntegrationAnalitics.Api.AssemblyInfo.cs
+D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics.Api\obj\Debug\net6.0\IntegrationAnalitics.Api.csproj.CoreCompileInputs.cache
