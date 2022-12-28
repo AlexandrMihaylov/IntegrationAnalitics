@@ -8,45 +8,45 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = IntegrationAnalitics
 build_property.RootNamespace = IntegrationAnalitics
-build_property.ProjectDir = D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics\
+build_property.ProjectDir = D:\.rider\IntegrationAnalitic\IntegrationAnalitics\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\.rider\IntegrationAnalitics\IntegrationAnalitics\IntegrationAnalitics
+build_property.MSBuildProjectDirectory = D:\.rider\IntegrationAnalitic\IntegrationAnalitics
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Home/FaqSearch.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Home/FaqSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXFTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Home/Index.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Home/Privacy.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Home/Uploading.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Home/Uploading.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGxvYWRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Shared/Error.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/_ViewImports.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/_ViewStart.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.rider/IntegrationAnalitics/IntegrationAnalitics/IntegrationAnalitics/Views/Shared/_Layout.cshtml]
+[D:/.rider/IntegrationAnalitic/IntegrationAnalitics/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vialqxf1wt
