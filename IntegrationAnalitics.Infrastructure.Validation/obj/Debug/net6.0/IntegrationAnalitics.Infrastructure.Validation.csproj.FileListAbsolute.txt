@@ -10,3 +10,15 @@ D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Validation\obj
 D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\refint\IntegrationAnalitics.Infrastructure.Validation.dll
 D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.pdb
 D:\.rider\IntegrationAnalitic\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\ref\IntegrationAnalitics.Infrastructure.Validation.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.deps.json
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.pdb
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.csproj.AssemblyReference.cache
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.AssemblyInfoInputs.cache
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.AssemblyInfo.cs
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.csproj.CoreCompileInputs.cache
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\refint\IntegrationAnalitics.Infrastructure.Validation.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.pdb
+C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Infrastructure.Validation\obj\Debug\net6.0\ref\IntegrationAnalitics.Infrastructure.Validation.dll

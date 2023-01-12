@@ -27,6 +27,11 @@ public class HomeController : Controller
     {
         return View("Uploading");
     }
+    
+    public IActionResult Validation()
+    {
+        return View("Validation");
+    }
 
     public IActionResult Privacy()
     {
