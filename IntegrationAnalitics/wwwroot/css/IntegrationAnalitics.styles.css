@@ -71,7 +71,7 @@
 }
 .cardqa:hover{
     background: rgba(255, 255, 255, 1);
- }
+}
 .cardqa-line{
     width: 100%;
     border-bottom: 1px solid gray;
@@ -156,7 +156,7 @@
     width: 100%;
     height: 100vh;
 }
-.uploading-api-navi{    
+.uploading-api-navi{
     padding: 20px;
     height: 80%;
     border-radius: 15px;
@@ -272,7 +272,7 @@ body { font-family: sans-serif; }
     margin-left: 10px;
 }
 .smev-navi-check{
-    
+
 }
 .smev-navi-fieldname{
     display: inline-block;
@@ -391,39 +391,34 @@ body { font-family: sans-serif; }
 .stack { grid-area: stack; }
 .settings { grid-area: settings; }
 .xml { grid-area: xml; }
-.xsd-label { grid-area: xsd-label; color: white; }
-.xml-label { grid-area: xml-label; color: white; }
+.xsd-label { grid-area: xsd-label; color: rgba(255, 255, 255, 0.5); }
+.xml-label { grid-area: xml-label; color: rgba(255, 255, 255, 0.5); }
 .xsd-label-space { grid-area: xsd-label-space; }
 .xml-label-space { grid-area: xml-label-space; }
 .panel { grid-area: panel; }
-
 .validation-grid-container {
     display: grid;
     grid-template-areas:
     'xsd stack settings xml'
     'xsd-label . . xml-label'
     'panel panel panel panel';
-    grid-template-rows: 15% 1.5em auto;
+    grid-template-rows: 10% 10% auto;
     grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    /*background-color: #2196F3;*/
+    column-gap: 50px;
     padding: 10px;
     text-align: left;
 }
-
 .validation-grid-container > div {
-    /*background-color: rgba(255, 255, 255, 0.8);*/
-    /*text-align: center;*/
     padding: 0px 0;
     font-size: 100%;
 }
 .validation-panel{
     padding: 20px;
-    height: 100%;
+    height: 29%;
     border-radius: 15px;
     width: 100%;
     margin-right: 30px;
-    background: white;
+    background-color: rgba(255, 255, 255, 0.5);
     opacity: 1;
     position: relative;
 }
@@ -437,87 +432,100 @@ body { font-family: sans-serif; }
 }
 .validation-button{
     background: rgba(255, 255, 255, 1);
-    border-radius: 25px;
     padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
 }
-.validation-panel-scroll{
-    overflow: auto;
-    width: 100%; 
+.validation-panel-template{
+    width: 100%;
     height: 100%;
-    /*background-color: gray;*/
-    margin-top: -15%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: -11%;
     display: block;
+    border-radius: 15px;
+    padding: 1%;
 }
-
-.grid-head-name_doc{
-    grid-area: grid-head-name_doc; font-weight: bold;
-}
-.grid-head-date_add{
-    grid-area: grid-head-date_add; font-weight: bold;
-}
-.grid-head-date_valid{
-    grid-area: grid-head-date_valid; font-weight: bold;
-}
-.grid-head-status{
-    grid-area: grid-head-status; font-weight: bold;
-}
-.grid-head-output{
-    grid-area: grid-head-output; font-weight: bold;
-}
-.grid-body-name_doc{
-    grid-area: grid-body-name_doc;
-}
-.grid-body-date_add{
-    grid-area: grid-body-date_add;
-}
-.grid-body-date_valid{
-    grid-area: grid-body-date_valid;
-}
-.grid-body-status{
-    grid-area: grid-body-status;
-}
-.grid-body-output{
-    grid-area: grid-body-output;
-}
-
-.template-areas-cell11{grid-area: template-areas-cell11;}
-
-.panel-scroll-grid{
+.template-head-name_doc{ grid-area: template-head-name_doc; font-weight: bold; text-align: left; margin-left: 10%;}
+.template-head-date_add{ grid-area: template-head-date_add; font-weight: bold; text-align: center;}
+.template-head-date_valid{ grid-area: template-head-date_valid; font-weight: bold; text-align: center;}
+.template-head-status{ grid-area: template-head-status; font-weight: bold; text-align: center;}
+.template-head-output{ grid-area: template-head-output; font-weight: bold; text-align: center;}
+.panel-template-head{
     display: grid;
-    
     grid-template-areas:
-        'grid-head-name_doc grid-head-date_add grid-head-date_valid grid-head-status grid-head-output'
-        'grid-body-name_doc grid-body-date_add grid-body-date_valid grid-body-status grid-body-output'
-        'template-areas-cell11 template-areas-cell12 . . . ';
-    grid-template-rows: auto auto; /* 15% 1.5em auto */
-    
-    grid-template-columns: auto auto auto auto auto;
+        'template-head-name_doc template-head-date_add template-head-date_valid template-head-status template-head-output';
+    grid-template-rows: auto;
+    grid-template-columns: 35% 21% 21% auto auto;
     gap: 10px;
-    /*background-color: #2196F3;*/
-    padding: 10px;
     text-align: left;
     margin-right: 5%;
     font-size: 0.75em;
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    padding: 15px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-right: 8%;
 }
-.panel-scroll-grid > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    /*text-align: center;*/
+.panel-template-head > div {
     padding: 0px 0;
     font-size: 100%;
 }
+.panel-template-scroll{
+    overflow: auto;
+    width: calc(100% - 20px);
+    height: 90%;
+    display: block;
+    border-radius: 15px;
+    margin: 20px;
+    margin-right: 0;
+}
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: black; }
+.grid-body-name_doc{ grid-area: grid-body-name_doc; }
+.grid-body-date_add{ grid-area: grid-body-date_add; }
+.grid-body-date_valid{ grid-area: grid-body-date_valid; }
+.grid-body-status{ grid-area: grid-body-status; }
+.grid-body-output{ grid-area: grid-body-output; }
+.panel-scroll-grid{
+    display: grid;
+    grid-template-areas:
+        'grid-body-name_doc grid-body-date_add grid-body-date_valid grid-body-status grid-body-output';
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    padding: 15px;
+    text-align: left;
+    margin-right: 5%;
+    font-size: 0.75em;
+    padding-top: 0;
+}
+.panel-scroll-grid > div {
+    padding: 0px 0;
+    font-size: 100%;
+    text-align: center;
+}
 .validation-panel-button{
     background: rgba(255, 255, 255, 1);
-    border-radius: 25px;
     padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /*width: 100%;*/
     margin-left: 95%;
     display: block;
     position: inherit;
     top: 0;
+}
+.panel-button-circle{
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.9);
+}
+.panel-button-rectangle{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 }
 /*endregion*/
