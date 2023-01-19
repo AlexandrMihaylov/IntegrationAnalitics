@@ -1,6 +1,11 @@
 ﻿<div class="uploading-menu">
-    <a class="menu-link">СМЭВ</a>
-    <a class="menu-link">API</a>
+    <a class="menu-link" onclick="
+    document.getElementsByClassName('uploading-smev-wrapper')[0].removeAttribute('hidden');
+    document.getElementsByClassName('uploading-api-wrapper')[0].createAttribute('hidden');">СМЭВ</a>
+    <a class="menu-link" onclick="
+    document.getElementsByClassName('uploading-api-wrapper')[0].removeAttribute('hidden');
+    document.getElementsByClassName('uploading-smev-wrapper')[0].createAttribute('hidden');
+    ">API</a>
 </div>
     <div hidden class="uploading-api-wrapper"><!--hidden-->
         <div class="uploading-api-navi">
@@ -88,7 +93,7 @@
     </div>
 </div>
 
-<div class="uploading-smev-wrapper">
+<div hidden class="uploading-smev-wrapper">
     <div class="uploading-smev-navi">
         <div class="grid-container">
             <div class="stands">
