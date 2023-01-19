@@ -158,7 +158,7 @@
 }
 .uploading-api-navi{
     padding: 20px;
-    height: 80%;
+    height: 75%;
     border-radius: 15px;
     width: 25%;
     margin-right: 30px;
@@ -247,8 +247,8 @@ body { font-family: sans-serif; }
     height: 100vh;
 }
 .uploading-smev-navi{
-    padding: 20px;
-    height: 80%;
+    padding: 15px;
+    height: 75%;
     border-radius: 15px;
     width: 25%;
     margin-right: 30px;
@@ -278,22 +278,19 @@ body { font-family: sans-serif; }
 }
 .navi-block-label{
     font-weight: 500;
-    margin-right: 5px;
-    margin-left: 10px;
-    display: block;
+    margin-top: 10%
 }
 .navi-block-brow{
     float: none;
     background: rgba(255, 255, 255, 1);
     border-radius: 25px;
-    padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 120px;
-    margin-right: 5px;
-    margin-left: 30px;
+    width: 100%;
+    height: 100%;
 }
 .stands { grid-area: stands; }
+.navi-title-label{ font-weight: bold; }
 .release { grid-area: release; }
 .bugfix { grid-area: bugfix; }
 .reserve { grid-area: reserve; }
@@ -316,24 +313,24 @@ body { font-family: sans-serif; }
 .grid-container {
     display: grid;
     grid-template-areas:
-    'stands release bugfix reserve reserve reserve'
-    'doc-ver doc-ver doc-ver-list doc-ver-list doc-ver-list doc-ver-list'
-    'doc-num doc-num doc-num-list doc-num-list doc-num-list doc-num-list'
-    'doc-type doc-type doc-type-list doc-type-list doc-type-list doc-type-list'
-    'type type type-list type-list type-list type-list'
-    'subj-code subj-code subj-code-list subj-code-list subj-code-list subj-code-list'
-    'time time time-list time-list time-list time-list'
-    'base64-format base64-format base64-format-list base64-format-list base64-format-list base64-format-list'
-    'cell-smev-button-download cell-smev-button-download cell-smev-button-code cell-smev-button-code cell-smev-button-code cell-smev-button-code';
+    'stands release bugfix reserve'
+    'doc-ver doc-ver doc-ver-list doc-ver-list'
+    'doc-num doc-num doc-num-list doc-num-list'
+    'doc-type doc-type doc-type-list doc-type-list'
+    'type type type-list type-list'
+    'subj-code subj-code subj-code-list subj-code-list'
+    'time time time-list time-list'
+    'base64-format base64-format base64-format-list base64-format-list'
+    'cell-smev-button-download cell-smev-button-download cell-smev-button-code cell-smev-button-code';
     gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
     text-align: left;
+    width: 100%;
+    height: 100%;
 }
 .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     /*text-align: center;*/
-    padding: 20px 0;
+    padding: 0 0;
     font-size: 100%;
 }
 .navi-stand-check{
@@ -348,12 +345,10 @@ body { font-family: sans-serif; }
     padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 120px;
-    margin-right: 5px;
-    margin-left: 30px;
+    width: 100%;
+    height: 100%;
 }
 .smev-button-code{
-    margin-left: 5px;
     float: right;
 }
 .smev-navi-body{
