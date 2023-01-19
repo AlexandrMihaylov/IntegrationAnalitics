@@ -12,7 +12,7 @@
         "<path d = \"m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z\"/>+\n" +
         "</svg>";
 
-    let row = ["1. agreement.xsd - agreement.xml","ы","15:06 21.12.2022",bi_check2_circle,bi_check2_circle];
+    let row = ["1. agreement.xsd - agreement.xml","15:06 21.12.2022","15:06 21.12.2022",bi_check2_circle,bi_check2_circle];
 
     for (let i = 0; i <= 49; i++) {
         if (i===15){
@@ -21,6 +21,8 @@
             for(let n = 0; n <= 4; n++){
                 await document.getElementsByClassName('panel-scroll-grid')[0].insertAdjacentHTML('beforeend', '<div class="cell">'+row[n]+'</div>');
             }
+            row[3] = bi_check2_circle;
+            row[4] = bi_check2_circle;
         }
         else{
             for(let n = 0; n <= 4; n++){
