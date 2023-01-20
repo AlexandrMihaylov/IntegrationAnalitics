@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nEBlBePCqf4bpPioyxV7avhapTdHSa9UIQbM83sD1SNFKHvJbyUBzlcQmLV9M/oc+jZlF64q37XKMSeS7PA7NA==",
+  "dgSpecHash": "rCWu293jDLkkB9VnTHo2cjolVLzvBudPm+16+0Js/GYf8AuM+Bpn3Pa3VLZkT/D6l1/Yqh9xnJFI1gVtB8dL5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Validation\\IntegrationAnalitics.Infrastructure.Validation.csproj",
+  "projectFilePath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Validation\\IntegrationAnalitics.Infrastructure.Validation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1200,11 +1200,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
+      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
       "projectName": "IntegrationAnalitics.Infrastructure.Database",
-      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
+      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj",
       "packagesPath": "C:\\Users\\Alexandr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Database\\obj\\",
+      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1224,8 +1224,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
-              "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
+            "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
+              "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
             }
           }
         }

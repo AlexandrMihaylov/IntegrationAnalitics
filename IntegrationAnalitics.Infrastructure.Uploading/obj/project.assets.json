@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Uploading\\IntegrationAnalitics.Infrastructure.Uploading.csproj",
+      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Uploading\\IntegrationAnalitics.Infrastructure.Uploading.csproj",
       "projectName": "IntegrationAnalitics.Infrastructure.Uploading",
-      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Uploading\\IntegrationAnalitics.Infrastructure.Uploading.csproj",
+      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Uploading\\IntegrationAnalitics.Infrastructure.Uploading.csproj",
       "packagesPath": "C:\\Users\\Alexandr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Uploading\\obj\\",
+      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Uploading\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexandr\\AppData\\Roaming\\NuGet\\NuGet.Config",

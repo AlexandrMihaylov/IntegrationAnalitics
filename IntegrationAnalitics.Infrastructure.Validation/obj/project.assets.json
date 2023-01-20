@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Validation\\IntegrationAnalitics.Infrastructure.Validation.csproj",
+      "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Validation\\IntegrationAnalitics.Infrastructure.Validation.csproj",
       "projectName": "IntegrationAnalitics.Infrastructure.Validation",
-      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Validation\\IntegrationAnalitics.Infrastructure.Validation.csproj",
+      "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Validation\\IntegrationAnalitics.Infrastructure.Validation.csproj",
       "packagesPath": "C:\\Users\\Alexandr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Infrastructure.Validation\\obj\\",
+      "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Validation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexandr\\AppData\\Roaming\\NuGet\\NuGet.Config",

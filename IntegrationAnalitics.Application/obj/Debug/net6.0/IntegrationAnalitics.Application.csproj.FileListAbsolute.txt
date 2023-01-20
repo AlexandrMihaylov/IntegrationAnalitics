@@ -34,3 +34,15 @@ C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\Integrat
 C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Application\obj\Debug\net6.0\refint\IntegrationAnalitics.Application.dll
 C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.pdb
 C:\Users\Alexandr\Desktop\IntegrationAnalitics\sln\IntegrationAnalitics\IntegrationAnalitics.Application\obj\Debug\net6.0\ref\IntegrationAnalitics.Application.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\bin\Debug\net6.0\IntegrationAnalitics.Application.deps.json
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\bin\Debug\net6.0\IntegrationAnalitics.Application.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\bin\Debug\net6.0\IntegrationAnalitics.Application.pdb
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.csproj.AssemblyReference.cache
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.AssemblyInfoInputs.cache
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.AssemblyInfo.cs
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.csproj.CoreCompileInputs.cache
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\refint\IntegrationAnalitics.Application.dll
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\IntegrationAnalitics.Application.pdb
+C:\Users\Alexandr\Desktop\IntegrationAnalitic\IntegrationAnalitic\IntegrationAnalitics.Application\obj\Debug\net6.0\ref\IntegrationAnalitics.Application.dll

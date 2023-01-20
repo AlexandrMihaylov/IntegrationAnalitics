@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qTPgX81p4r654mVOasiJevJ6I5YhvzsJ4DPqf9XPSqG+NKB/5Fl6UPDMAEn/cd/pTiXfHHzXTf1Sde5o5QTgnQ==",
+  "dgSpecHash": "3foD616TK9hebZakmn98N37rq2b9h0ikq8gncw2+zUABe8U+HdGOVkIewTbGSsahe91t41H5/mrUD9Pm4HLoMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitics\\sln\\IntegrationAnalitics\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj",
+  "projectFilePath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexandr\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Alexandr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
