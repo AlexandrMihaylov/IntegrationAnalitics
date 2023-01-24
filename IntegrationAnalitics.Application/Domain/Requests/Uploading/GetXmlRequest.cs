@@ -6,7 +6,6 @@ namespace IntegrationAnalitics.Application.Domain.Requests.Uploading;
 public class GetXmlRequest: BaseRequest, IRequest<GetXmlResponse>
 {
     public string Uri { get; set; }
-    public string Xml { get; set; }
     public bool IsRelease { get; set; }
     public bool IsBugfix { get; set; }
     public bool IsReserve { get; set; }

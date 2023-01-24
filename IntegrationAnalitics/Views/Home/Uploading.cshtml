@@ -190,8 +190,9 @@
                 <script src="/js/uploading.js"></script>
                 <button class=" smev-button-download smev-button-code" onclick="
                     async function fetch_ajax(){
-                    let request = {
-                      /*
+                    /*
+                        let request = {
+                      
                       Uri: 'https://unp.bars.group/release/api/smev',
                       Xml: 'xml',
                       IsRelease: document.getElementById('release').checked,
@@ -204,15 +205,31 @@
                       CodeSubject: document.getElementById('subj-code-list').options[getElementById('subj-code-list').selectedIndex].value,
                       Time: document.getElementById('time-list').options[getElementById('time-list').selectedIndex].value,
                       Base64Format: document.getElementById('base64-format-list').options[getElementById('base64-format-list').selectedIndex].value 
-                      */                  
+                                        
                     };
-                    let response = await fetch('https://localhost:7067/getXml', { // warning: maybe loop address
+                    */
+                       let request = 
+                       'Uri' + 'https://unp.bars.group/release/api/smev' + 
+                       'Xml' + 'xml' + 
+                       'IsRelease' + document.getElementById('release').checked.toString() +
+                       'IsBugfix' + document.getElementById('bugfix').checked.toString() +
+                       'IsReserve' + document.getElementById('reserve').checked.toString() +
+                       'VersionDocument' + document.getElementById('doc-ver-list').options[getElementById('doc-ver-list').selectedIndex].value.toString() +
+                       'NumberDocument' + document.getElementById('doc-num-list').options[getElementById('doc-num-list').selectedIndex].value.toString() +
+                       'TypeDocument' + document.getElementById('doc-type-list').options[getElementById('doc-type-list').selectedIndex].value.toString() +
+                       'TypeType' + document.getElementById('type-list').options[getElementById('type-list').selectedIndex].value.toString() +
+                       'CodeSubject' + document.getElementById('subj-code-list').options[getElementById('subj-code-list').selectedIndex].value.toString() +
+                       'Time' + document.getElementById('time-list').options[getElementById('time-list').selectedIndex].value.toString() +
+                       'Base64Format' + document.getElementById('base64-format-list').options[getElementById('base64-format-list').selectedIndex].value.toString(); 
+                    //https://localhost:7067/getXml?Uri=123&Xml&IsRelease=true&IsBugfix=true&IsReserve=true&VersionDocument=123&NumberDocument=123&TypeDocument=123&TypeType=123&CodeSubject=123&Time=123&Base64Format=123                         
+                    let response = await fetch('https://localhost:7067/getXml?' + request /*, { // warning: maybe loop address
                       method: 'GET',
                       headers: {
                         'Content-Type': 'application/json;charset=utf-8'
-                      },
-                      body: JSON.stringify(request)
-                    });
+                      }
+                      //,body: JSON.stringify(request)
+                    }*/
+                    );
                     let result = await response.json();
                     console.log(result.message);}
                     fetch_ajax();
