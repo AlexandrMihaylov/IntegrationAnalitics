@@ -9,14 +9,19 @@ namespace IntegrationAnalitics.Application.Handlers.FAQ;
 
 public class GetXmlHandler : IRequestHandler<GetXmlRequest, GetXmlResponse>
 {
-    
+    private readonly IHttpClientFactory _httpClientFactory = null!;
+    public GetXmlHandler(IHttpClientFactory httpClientFactory)
+    {
+        _httpClientFactory = httpClientFactory;
+    }
+
     public async Task<GetXmlResponse> Handle(GetXmlRequest request, CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(request.Xml))
         {
             return new GetXmlResponse() {Success = false, Message = "Keywords can not be null or empty"};
         }
-        using var client = new HttpClient();
+        using HttpClient client = _httpClientFactory.CreateClient(); //using var client = new HttpClient();
         var message = new HttpRequestMessage();
         message.Content = new StringContent(request.Xml);
         client.BaseAddress = new Uri(request.Uri);

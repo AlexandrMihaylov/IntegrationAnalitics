@@ -98,92 +98,85 @@
             </div>
             <div class="release">
                 <label class="navi-stand-label">Release</label>
-                <input class="navi-stand-check" type="checkbox"/>
+                <input id="release" class="navi-stand-check" type="checkbox"/>
             </div>
             <div class="bugfix">
                 <label class="navi-stand-label">Bugfix</label>
-                <input class="navi-stand-check" type="checkbox"/>
+                <input id="bugfix" class="navi-stand-check" type="checkbox"/>
             </div>
             <div class="reserve">
                 <label class="navi-stand-label">Reserve</label>
-                <input class="navi-stand-check" type="checkbox"/>
+                <input id="reserve" class="navi-stand-check" type="checkbox"/>
             </div>
-            <div class="doc-ver">                
-                <label class="navi-block-label">Версия документа</label>
-            </div>
+            <div class="doc-ver"><label class="navi-block-label">Версия документа</label></div>
             <div class="doc-ver-list">
-                <input class="navi-block-brow" list="doc-ver-list">
+                <!--<input class="navi-block-brow" list="doc-ver-list">
                 <datalist id="doc-ver-list">
                     <option value="1"></option>
                     <option value="2"></option>
                     <option value="3"></option>
-                </datalist>
+                </datalist>-->
+                <input/>
+                <select id="doc-ver-list"><!--onchange="console.log(this.options[this.selectedIndex].value)"-->
+                    <option value="1">raz</option>
+                    <option value="2">dva</option>
+                    <option value="3">tri</option>
+                </select>
             </div>
-            <div class="doc-num">                
-                <label class="navi-block-label">Номер документа</label>
-            </div>
+            
+            <div class="doc-num"><label class="navi-block-label">Номер документа</label></div>
             <div class="doc-num-list">
-                <input class="navi-block-brow" list="doc-num-list">
-                <datalist id="doc-num-list">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                </datalist>
+                <input/><!--<input class="navi-block-brow" list="doc-num-list">-->
+                    <select id="doc-num-list">
+                        <option value="1">raz</option>
+                        <option value="2">dva</option>
+                        <option value="3">tri</option>
+                    </select>
             </div>
-            <div class="doc-type">                
-                <label class="navi-block-label">Тип документа</label>
-            </div>
+            <div class="doc-type"><label class="navi-block-label">Тип документа</label></div>
             <div class="doc-type-list">
-                <input class="navi-block-brow" list="doc-type-list">
-                <datalist id="doc-type-list">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                </datalist>
+                <input/><!--<input class="navi-block-brow" list="doc-type-list">-->
+                <select id="doc-type-list">
+                    <option value="1">raz</option>
+                    <option value="2">dva</option>
+                    <option value="3">tri</option>
+                </select>
                 </div>
-            <div class="type">                
-                <label class="navi-block-label">Тип(Type)</label>
-            </div>
+            <div class="type"><label class="navi-block-label">Тип(Type)</label></div>
             <div class="type-list">
-                <input class="navi-block-brow" list="type-list">
-                <datalist id="type-list">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                </datalist>
+                <input/><!--<input class="navi-block-brow" list="type-list">-->
+                <select id="type-list">
+                    <option value="1">raz</option>
+                    <option value="2">dva</option>
+                    <option value="3">tri</option>
+                </select>
             </div>
-            <div class="subj-code">                
-                <label class="navi-block-label">Код субъекта</label>
-            </div>
+            <div class="subj-code"><label class="navi-block-label">Код субъекта</label></div>
             <div class="subj-code-list">
-                <input class="navi-block-brow" list="subj-code-list">
-                <datalist id="subj-code-list">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                </datalist>
-                </div>
-            <div class="time">                
-                <label class="navi-block-label">Время</label>
+                <input/><!--<input class="navi-block-brow" list="subj-code-list">-->
+                <select id="subj-code-list">
+                    <option value="1">raz</option>
+                    <option value="2">dva</option>
+                    <option value="3">tri</option>
+                </select>
             </div>
+            <div class="time"><label class="navi-block-label">Время</label></div>
             <div class="time-list">
-                <input class="navi-block-brow" list="time-list">
-                <datalist id="time-list">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                </datalist>
-                </div>
-            <div class="base64-format">                
-                <label class="navi-block-label">Base64 формат</label>
+                <input/><!--<input class="navi-block-brow" list="time-list">-->
+                <select id="time-list">
+                    <option value="1">raz</option>
+                    <option value="2">dva</option>
+                    <option value="3">tri</option>
+                </select>
             </div>
+            <div class="base64-format"><label class="navi-block-label">Base64 формат</label></div>
             <div class="base64-format-list">
-                <input class="navi-block-brow" list="base64-format-list">
-                <datalist id="base64-format-list">
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                </datalist>
+                <input/><!--<input class="navi-block-brow" list="base64-format-list">-->
+                <select id="base64-format-list">
+                    <option value="1">raz</option>
+                    <option value="2">dva</option>
+                    <option value="3">tri</option>
+                </select>
             </div>
             <div class="cell-smev-button-download">
                 <button class="smev-button-download">
@@ -194,7 +187,37 @@
                 </button>
             </div>
             <div class="cell-smev-button-code">
-                <button class=" smev-button-download smev-button-code">
+                <script src="/js/uploading.js"></script>
+                <button class=" smev-button-download smev-button-code" onclick="
+                    async function fetch_ajax(){
+                    let request = {
+                      /*
+                      Uri: 'https://unp.bars.group/release/api/smev',
+                      Xml: 'xml',
+                      IsRelease: document.getElementById('release').checked,
+                      IsBugfix: document.getElementById('bugfix').checked,
+                      IsReserve: document.getElementById('reserve').checked,
+                      VersionDocument: document.getElementById('doc-ver-list').options[getElementById('doc-ver-list').selectedIndex].value,
+                      NumberDocument: document.getElementById('doc-num-list').options[getElementById('doc-num-list').selectedIndex].value,
+                      TypeDocument: document.getElementById('doc-type-list').options[getElementById('doc-type-list').selectedIndex].value,
+                      TypeType: document.getElementById('type-list').options[getElementById('type-list').selectedIndex].value,
+                      CodeSubject: document.getElementById('subj-code-list').options[getElementById('subj-code-list').selectedIndex].value,
+                      Time: document.getElementById('time-list').options[getElementById('time-list').selectedIndex].value,
+                      Base64Format: document.getElementById('base64-format-list').options[getElementById('base64-format-list').selectedIndex].value 
+                      */                  
+                    };
+                    let response = await fetch('https://localhost:7067/getXml', { // warning: maybe loop address
+                      method: 'GET',
+                      headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                      },
+                      body: JSON.stringify(request)
+                    });
+                    let result = await response.json();
+                    console.log(result.message);}
+                    fetch_ajax();
+                    
+                    "><!-- uploading(); -->
                     Показать
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.7523 2.16169C13.7777 2.0793 13.7865 1.99273 13.7784 1.90692C13.7703 1.8211 13.7453 1.73773 13.705 1.66156C13.6647 1.58538 13.6097 1.5179 13.5433 1.46297C13.4769 1.40803 13.4003 1.36671 13.3179 1.34137C13.2355 1.31604 13.1489 1.30718 13.0631 1.3153C12.9773 1.32342 12.8939 1.34836 12.8178 1.3887C12.7416 1.42904 12.6741 1.48399 12.6192 1.55041C12.5642 1.61683 12.5229 1.69342 12.4976 1.77581L7.24758 18.8383C7.19641 19.0047 7.21343 19.1846 7.2949 19.3384C7.37638 19.4923 7.51562 19.6075 7.68201 19.6586C7.84841 19.7098 8.02831 19.6928 8.18215 19.6113C8.33598 19.5298 8.45116 19.3906 8.50233 19.2242L13.7523 2.16169V2.16169ZM6.37083 5.44162C6.43194 5.50258 6.48043 5.575 6.51351 5.65473C6.5466 5.73446 6.56362 5.81993 6.56362 5.90625C6.56362 5.99257 6.5466 6.07804 6.51351 6.15777C6.48043 6.2375 6.43194 6.30992 6.37083 6.37088L2.24039 10.5L6.37083 14.6291C6.49405 14.7524 6.56328 14.9195 6.56328 15.0938C6.56328 15.268 6.49405 15.4351 6.37083 15.5584C6.2476 15.6816 6.08047 15.7508 5.9062 15.7508C5.73193 15.7508 5.5648 15.6816 5.44158 15.5584L0.847827 10.9646C0.786713 10.9037 0.738226 10.8312 0.705142 10.7515C0.672059 10.6718 0.655029 10.5863 0.655029 10.5C0.655029 10.4137 0.672059 10.3282 0.705142 10.2485C0.738226 10.1688 0.786713 10.0963 0.847827 10.0354L5.44158 5.44162C5.50254 5.38051 5.57496 5.33202 5.65468 5.29894C5.73441 5.26586 5.81988 5.24883 5.9062 5.24883C5.99252 5.24883 6.07799 5.26586 6.15772 5.29894C6.23745 5.33202 6.30987 5.38051 6.37083 5.44162V5.44162ZM14.6291 5.44162C14.568 5.50258 14.5195 5.575 14.4864 5.65473C14.4533 5.73446 14.4363 5.81993 14.4363 5.90625C14.4363 5.99257 14.4533 6.07804 14.4864 6.15777C14.5195 6.2375 14.568 6.30992 14.6291 6.37088L18.7595 10.5L14.6291 14.6291C14.5681 14.6901 14.5197 14.7626 14.4866 14.8423C14.4536 14.922 14.4366 15.0075 14.4366 15.0938C14.4366 15.18 14.4536 15.2655 14.4866 15.3452C14.5197 15.4249 14.5681 15.4974 14.6291 15.5584C14.6901 15.6194 14.7625 15.6678 14.8422 15.7008C14.922 15.7338 15.0074 15.7508 15.0937 15.7508C15.18 15.7508 15.2654 15.7338 15.3452 15.7008C15.4249 15.6678 15.4973 15.6194 15.5583 15.5584L20.1521 10.9646C20.2132 10.9037 20.2617 10.8312 20.2948 10.7515C20.3278 10.6718 20.3449 10.5863 20.3449 10.5C20.3449 10.4137 20.3278 10.3282 20.2948 10.2485C20.2617 10.1688 20.2132 10.0963 20.1521 10.0354L15.5583 5.44162C15.4974 5.38051 15.4249 5.33202 15.3452 5.29894C15.2655 5.26586 15.18 5.24883 15.0937 5.24883C15.0074 5.24883 14.9219 5.26586 14.8422 5.29894C14.7625 5.33202 14.69 5.38051 14.6291 5.44162V5.44162Z" fill="black"/>
@@ -227,13 +250,15 @@
                     <script id="rendered-js-twinhead"></script>
                 </body>
             </html>
+            <div >
             <button class="smev-button-download">
                 Скачать
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 2.625C8.76782 2.63043 7.09469 3.25518 5.78288 4.38638C4.7775 5.25263 4.04906 6.38137 3.86137 7.51406C1.66162 7.99969 0 9.91594 0 12.2299C0 14.9179 2.24175 17.0625 4.96256 17.0625H16.6517C19.0339 17.0625 21 15.1856 21 12.8271C21 10.6798 19.3699 8.93025 17.2804 8.63494C16.9614 5.24869 14.0306 2.625 10.5 2.625ZM13.5896 11.6209L10.9646 14.2459C10.9037 14.307 10.8312 14.3555 10.7515 14.3886C10.6718 14.4216 10.5863 14.4387 10.5 14.4387C10.4137 14.4387 10.3282 14.4216 10.2485 14.3886C10.1688 14.3555 10.0963 14.307 10.0354 14.2459L7.41037 11.6209C7.34936 11.5599 7.30096 11.4874 7.26794 11.4077C7.23492 11.328 7.21792 11.2425 7.21792 11.1562C7.21792 11.07 7.23492 10.9845 7.26794 10.9048C7.30096 10.8251 7.34936 10.7526 7.41037 10.6916C7.5336 10.5684 7.70073 10.4992 7.875 10.4992C7.96129 10.4992 8.04673 10.5162 8.12645 10.5492C8.20617 10.5822 8.27861 10.6306 8.33963 10.6916L9.84375 12.1971V7.21875C9.84375 7.0447 9.91289 6.87778 10.036 6.75471C10.159 6.63164 10.326 6.5625 10.5 6.5625C10.674 6.5625 10.841 6.63164 10.964 6.75471C11.0871 6.87778 11.1562 7.0447 11.1562 7.21875V12.1971L12.6604 10.6916C12.7836 10.5684 12.9507 10.4992 13.125 10.4992C13.2993 10.4992 13.4664 10.5684 13.5896 10.6916C13.7129 10.8149 13.7821 10.982 13.7821 11.1562C13.7821 11.3305 13.7129 11.4976 13.5896 11.6209V11.6209Z" fill="black"/>
                 </svg>
             </button>
-            <button class=" smev-button-download smev-button-code">
+            </div>
+            <button class="smev-button-download smev-button-code">
                 Показать
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.7523 2.16169C13.7777 2.0793 13.7865 1.99273 13.7784 1.90692C13.7703 1.8211 13.7453 1.73773 13.705 1.66156C13.6647 1.58538 13.6097 1.5179 13.5433 1.46297C13.4769 1.40803 13.4003 1.36671 13.3179 1.34137C13.2355 1.31604 13.1489 1.30718 13.0631 1.3153C12.9773 1.32342 12.8939 1.34836 12.8178 1.3887C12.7416 1.42904 12.6741 1.48399 12.6192 1.55041C12.5642 1.61683 12.5229 1.69342 12.4976 1.77581L7.24758 18.8383C7.19641 19.0047 7.21343 19.1846 7.2949 19.3384C7.37638 19.4923 7.51562 19.6075 7.68201 19.6586C7.84841 19.7098 8.02831 19.6928 8.18215 19.6113C8.33598 19.5298 8.45116 19.3906 8.50233 19.2242L13.7523 2.16169V2.16169ZM6.37083 5.44162C6.43194 5.50258 6.48043 5.575 6.51351 5.65473C6.5466 5.73446 6.56362 5.81993 6.56362 5.90625C6.56362 5.99257 6.5466 6.07804 6.51351 6.15777C6.48043 6.2375 6.43194 6.30992 6.37083 6.37088L2.24039 10.5L6.37083 14.6291C6.49405 14.7524 6.56328 14.9195 6.56328 15.0938C6.56328 15.268 6.49405 15.4351 6.37083 15.5584C6.2476 15.6816 6.08047 15.7508 5.9062 15.7508C5.73193 15.7508 5.5648 15.6816 5.44158 15.5584L0.847827 10.9646C0.786713 10.9037 0.738226 10.8312 0.705142 10.7515C0.672059 10.6718 0.655029 10.5863 0.655029 10.5C0.655029 10.4137 0.672059 10.3282 0.705142 10.2485C0.738226 10.1688 0.786713 10.0963 0.847827 10.0354L5.44158 5.44162C5.50254 5.38051 5.57496 5.33202 5.65468 5.29894C5.73441 5.26586 5.81988 5.24883 5.9062 5.24883C5.99252 5.24883 6.07799 5.26586 6.15772 5.29894C6.23745 5.33202 6.30987 5.38051 6.37083 5.44162V5.44162ZM14.6291 5.44162C14.568 5.50258 14.5195 5.575 14.4864 5.65473C14.4533 5.73446 14.4363 5.81993 14.4363 5.90625C14.4363 5.99257 14.4533 6.07804 14.4864 6.15777C14.5195 6.2375 14.568 6.30992 14.6291 6.37088L18.7595 10.5L14.6291 14.6291C14.5681 14.6901 14.5197 14.7626 14.4866 14.8423C14.4536 14.922 14.4366 15.0075 14.4366 15.0938C14.4366 15.18 14.4536 15.2655 14.4866 15.3452C14.5197 15.4249 14.5681 15.4974 14.6291 15.5584C14.6901 15.6194 14.7625 15.6678 14.8422 15.7008C14.922 15.7338 15.0074 15.7508 15.0937 15.7508C15.18 15.7508 15.2654 15.7338 15.3452 15.7008C15.4249 15.6678 15.4973 15.6194 15.5583 15.5584L20.1521 10.9646C20.2132 10.9037 20.2617 10.8312 20.2948 10.7515C20.3278 10.6718 20.3449 10.5863 20.3449 10.5C20.3449 10.4137 20.3278 10.3282 20.2948 10.2485C20.2617 10.1688 20.2132 10.0963 20.1521 10.0354L15.5583 5.44162C15.4974 5.38051 15.4249 5.33202 15.3452 5.29894C15.2655 5.26586 15.18 5.24883 15.0937 5.24883C15.0074 5.24883 14.9219 5.26586 14.8422 5.29894C14.7625 5.33202 14.69 5.38051 14.6291 5.44162V5.44162Z" fill="black"/>

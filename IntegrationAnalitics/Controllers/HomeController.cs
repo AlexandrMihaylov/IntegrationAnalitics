@@ -7,6 +7,8 @@ using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Text;
+using IntegrationAnalitics.Application.Domain.Requests.Uploading;
+using MediatR;
 
 namespace IntegrationAnalitics.Controllers;
 
@@ -15,7 +17,7 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
-    {
+    {                                                       //вошёл в контроллер
         _logger = logger;
     }
 
@@ -32,11 +34,11 @@ public class HomeController : Controller
     //TODO : Алгоритм выгрузки по смеву
     //TODO : Задать начальные перменные для старта выгрузки после прописать алгоритм запросов выгрузки
     //TODO : Получить текст документа, отправить его на фронт, + сделать возможность скачивания
-    public async Task<IActionResult> Uploading()
+
+    public IActionResult Uploading()
     {
         return View("Uploading");
     }
-
     public IActionResult Validation()
     {
         return View("Validation");

@@ -1,7 +1,14 @@
+using System.Reflection;
+using IntegrationAnalitics.Application.Handlers.FAQ;
+using MediatR;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
@@ -25,3 +32,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+//BuildWebHost(args).Run();
+//public static IWebHost BuildWebHost(string[] args) => WebHost.CreateDefaultBuilder(args).UseStartup < startup > ().Build();  
+ 
