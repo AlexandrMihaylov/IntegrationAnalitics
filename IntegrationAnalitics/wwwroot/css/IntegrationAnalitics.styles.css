@@ -221,6 +221,11 @@
 body { font-family: sans-serif; }
 .gallery {
     background: #EEE;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    max-height:90%;
 }
 .gallery-cell {
     width: 50%;
