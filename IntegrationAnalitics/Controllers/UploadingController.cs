@@ -23,7 +23,20 @@ public class UploadingController : Controller
             return Ok(response);
 
         return BadRequest(response);
-    }  
+    }
+
+    [HttpGet]
+    [Route("/uploading/getApi")]
+    public async Task<IActionResult> GetApi([FromQuery] GetApiRequest request)
+    {
+        var response = await _mediator.Send(request);
+        Console.WriteLine(response.ApiXml);
+        if (response.Success)
+            return Ok(response);
+
+        return BadRequest(response);
+    }
+
     [HttpGet]
     [Route("test")]
     //https://localhost:7067/getXml?uri=''&xml=''

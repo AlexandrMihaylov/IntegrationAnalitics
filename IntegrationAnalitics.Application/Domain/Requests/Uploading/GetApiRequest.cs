@@ -8,8 +8,8 @@ using IntegrationAnalitics.Application.Domain.Responses.Uploading;
 
 namespace IntegrationAnalitics.Application.Domain.Requests.Uploading;
 
-internal class GetApiRequest: BaseRequest, IRequest<GetApiResponse>
+public class GetApiRequest: BaseRequest, IRequest<GetApiResponse>
 {
-    public string ApiId { get; set; }
+    //public string ApiId { get; set; }
     public string ApiName { get; set; }
 }

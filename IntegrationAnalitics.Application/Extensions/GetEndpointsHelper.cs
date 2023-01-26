@@ -21,13 +21,22 @@ public class GetEndpointsHelper : IHostedService
         /*_repository = repository;
         _repositoryMid = repositoryMid;*/
     }
-
-    public Task StartAsync(CancellationToken cancellationToken)
+    public string[] GetMethodsName()
     {
         string[] endpoints = GetEndPoints();
-        string[] methodName = new string[endpoints.Length];
-        EndpointsOutput(endpoints, methodName);
+
+        string[] methodName = EndpointsOutput(endpoints);
+        return methodName;
+    }
+    public Task StartAsync(CancellationToken cancellationToken)
+    {
+        /*
+        string[] endpoints = GetEndPoints();
+        
+        string[] methodName = EndpointsOutput(endpoints);
+        */
         return StopAsync(cancellationToken);
+        
     }
     string[] GetEndPoints()
     {
@@ -37,23 +46,19 @@ public class GetEndpointsHelper : IHostedService
         var output = endpoints.Select(e => e.RoutePattern.RawText).ToArray();
         return output;
     }
-    string[] EndpointsOutput(string[] endpoints, string[] methodName)
+    string[] EndpointsOutput(string[] endpoints)
     {
         char searchingElement = '/';
+        string[] methodName = new string[endpoints.Length];
         int searchingElementIndex;
         int iterator = 0;
         foreach (var endpoint in endpoints)
         {
-
-            Console.WriteLine(endpoint);
-
+            Console.WriteLine("Endpoint = " + endpoint);
             searchingElementIndex = endpoint.LastIndexOf(searchingElement);
             methodName[iterator] = endpoint.Substring(searchingElementIndex, endpoint.Length);
-
-            Console.WriteLine(methodName[iterator]);
-
+            Console.WriteLine("Method = " + methodName[iterator]);
             iterator++;
-
         }
         return methodName;
     }

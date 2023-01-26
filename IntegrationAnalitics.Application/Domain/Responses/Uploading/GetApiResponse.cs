@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IntegrationAnalitics.Application.Domain.Responses.Uploading;
 
-internal class GetApiResponse : BaseResponse
+public class GetApiResponse : BaseResponse
 {
-    public List<string>? Api { get; set; }
+    public List<string>? ApiXml { get; set; }
 }
