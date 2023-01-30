@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj": {}
+    "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
+    "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj",
+        "projectUniqueName": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj",
         "projectName": "IntegrationAnalitics.Application",
-        "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj",
-        "packagesPath": "C:\\Users\\Alexandr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\obj\\",
+        "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj",
+        "packagesPath": "C:\\Users\\Ваня\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ваня\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,10 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/45/packages/nuget/index.json": {},
-          "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/52/packages/nuget/index.json": {},
-          "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/79/packages/nuget/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -50,6 +47,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -76,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.1.22431.12\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj": {
+    "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
+        "projectUniqueName": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
         "projectName": "IntegrationAnalitics",
-        "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
-        "packagesPath": "C:\\Users\\Alexandr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics\\obj\\",
+        "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
+        "packagesPath": "C:\\Users\\Ваня\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ваня\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,17 +99,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/45/packages/nuget/index.json": {},
-          "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/52/packages/nuget/index.json": {},
-          "https://derzhava.gitlab.yandexcloud.net/api/v4/projects/79/packages/nuget/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
-                "projectPath": "C:\\Users\\Alexandr\\Desktop\\IntegrationAnalitic\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
+              "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
+                "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
               }
             }
           }
@@ -147,7 +145,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.1.22431.12\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
