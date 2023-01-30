@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -8,11 +8,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+      <ProjectReference Include="..\IntegrationAnalitics.Application\IntegrationAnalitics.Application.csproj" />
+      <ProjectReference Include="..\IntegrationAnalitics.Infrastructure.Database\IntegrationAnalitics.Infrastructure.Database.csproj" />
+      <ProjectReference Include="..\IntegrationAnalitics.Infrastructure.Uploading\IntegrationAnalitics.Infrastructure.Uploading.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\IntegrationAnalitics.Application\IntegrationAnalitics.Application.csproj" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
     </ItemGroup>
 
 </Project>
