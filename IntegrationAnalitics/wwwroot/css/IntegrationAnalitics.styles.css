@@ -221,13 +221,19 @@
 body { font-family: sans-serif; }
 .gallery {
     background: #EEE;
+    width: 200%;
+    height: 90%;
+}
+.gallery > div {
+    height: 100%;
 }
 .gallery-cell {
     width: 50%;
-    height: 9em;
+    height: 400px;
     margin-right: 10px;
-    background: #8C8;
     counter-increment: gallery-cell;
+    overflow-y: auto;
+    font-size: 150%;
 }
 /* cell number */
 .gallery-cell:before {
@@ -240,18 +246,32 @@ body { font-family: sans-serif; }
 /*end external css: flickity.css*/
 .uploading-smev-wrapper{
     margin-top: 40px;
-    margin-left: 41px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
+    /*margin-left: 41px;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*height: 100vh;*/
+
+    display: grid;
+    grid-template-areas:
+        'template-head-name_doc template-head-date_add';
+    grid-template-rows: auto;
+    grid-template-columns: 30% 70%;/* auto 31% */
+    gap: 10px;
+    text-align: left;
+    margin-right: 5%;
+    font-size: 0.75em;
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    padding: 0;
+      
+}
+.uploading-smev-wrapper > div{
+    height: 140%;
 }
 .uploading-smev-navi{
     padding: 15px;
     height: 75%;
     border-radius: 15px;
-    width: 25%;
-    margin-right: 30px;
     background: white;
     opacity: 1;
 }
@@ -345,11 +365,13 @@ body { font-family: sans-serif; }
     padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    height: 50%;
 }
 .smev-button-code{
     float: right;
+    height: 10%;
+    width: 20%;
 }
 .smev-navi-body{
     height: calc(97% - 30px);
@@ -365,12 +387,32 @@ body { font-family: sans-serif; }
     margin-left: 10px;
 }
 .uploading-smev-files{
-    height: 80%;
+    /*height: 30%;*/
     border-radius: 15px;
-    margin-right: 40px;
-    width: calc(75% - 30px - 41px - 40px);
     background: white;
     opacity: .7;
+
+
+
+    display: grid;
+    grid-template-areas:
+        'template-head-name_doc qwe'
+        'template-head-date_add template-head-date_add2';
+    grid-template-rows: 85% 15%;
+    grid-template-columns: auto auto; /* auto 31% */
+    gap: 10px;
+    text-align: left;
+    margin-right: 5%;
+    font-size: 0.75em;
+    width: calc(100% - 20px);
+    padding: 0;
+    
+    
+    
+    
+}
+.uploading-smev-files > div{
+    /*height: 15%;*/
 }
 /*endregion*/
 /*region*/
