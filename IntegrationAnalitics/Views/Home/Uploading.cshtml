@@ -232,7 +232,7 @@
                 <a download='xml.xml' id='linkForSavingFile' hidden></a>
                 <button class="smev-button-download" onclick="
                     async function fetch_ajax_download(){
-                        document.getElementById('gallery-cell-first').innerText = 'Файл загружается, подождите ...';
+                        document.getElementById('gallery-cell-0').innerText = 'Файл загружается, подождите ...';
                         let uri = 'https://localhost:7068/uploading/getsmevtext?';
                         let versionDocument = document.getElementsByClassName('ver-list-input')[0].value;
                         let numberDocument = document.getElementsByClassName('num-list-input')[0].value;
@@ -252,7 +252,7 @@
                                   }; 
                                   saveXml();
                           });
-                         document.getElementById('gallery-cell-first').innerText = 'Файл загружен.';
+                         document.getElementById('gallery-cell-0').innerText = 'Файл загружен.';
                     }
                     fetch_ajax_download();">
                     Скачать
@@ -266,45 +266,44 @@
                 <script src="/js/XmlBeautify.js"></script>
                 <button class=" smev-button-download smev-button-code" onclick="
                     async function fetch_ajax(){
-                        
-                        
-                        
                         //выгрузить направо страницу первая становится второй
-                        
-                        
-                        
-                        
-                        
-                        
+                        //+1 счётчик к каждой странице
+                        //for (let countCells = 0; countCells < document.getElementsByClassName('smev-counter').length; countCells++){
+                        ///    document.getElementsByClassName('smev-counter')[countCells].id = await 'gallery-cell-' + await (countCells + 1).toString();
+                        //};
+                        //создать новую страницу
+                        //await document.getElementById('gallery-cell-1').insertAdjacentHTML('beforebegin', '<div id=&quot;gallery-cell-0&quot; class=&quot;gallery-cell smev-counter&quot;></div>'); //'<option value=&quot;' + resp + '&quot;>' + documentTypeList[i] + '</option>'
+                        //<div id='gallery-cell-0' class='gallery-cell smev-counter'></div>
+                        //await document.getElementsByClassName('flickity-page-dots')[0].insertAdjacentHTML('beforeend', '<li class=&quot;dot&quot;></li>');
+                        //await document.getElementsByClassName('dot')[0].insertAdjacentHTML('beforebegin', '<li class=&quot;dot&quot;></li>'); //'<option value=&quot;' + resp + '&quot;>' + documentTypeList[i] + '</option>'
+                        //await document.getElementsByClassName('uploading-smev-files')[0].reload();
                         //создать 2 ячейку
-                        
-                        
-                        //await document.getElementById('gallery-smev').insertAdjacentHTML('beforeend', '<option value=&quot;' + resp + '&quot;>' + documentTypeList[i] + '</option>');
-                        //<div id='gallery-cell-1' class='gallery-cell'>1</div>
-                        
-                        
+                        //let n = n + 1;
+                        //await document.getElementById('gallery-cell').insertAdjacentHTML('beforebegin', '<div id=&quot;gallery-cell-' + n + '&quot; class=&quot;gallery-cell&quot;>' + n + '</div>'); //'<option value=&quot;' + resp + '&quot;>' + documentTypeList[i] + '</option>'
                         //присвоить второй ячейке значение которое получить из 1 ячейки
-                        
-                        
-                        
-                        
-                        
-                        
                         //на место первой становится новая загруженная
-                        document.getElementById('gallery-cell-first').innerText = 'Документ загружается, подождите ...';
+                        
+                        /*
+                        for(let cellnum = await 9; await cellnum >= await 1; await cellnum--){
+                            //await console.log(cellnum)
+                            //console.log(await document.getElementById('gallery-cell-' + cellnum.toString()).textContent);
+                            //console.log(await document.getElementById('gallery-cell-' + (cellnum - 1).toString()).textContent);
+                            //document.getElementById('gallery-cell-' + cellnum.toString()).textContent = await document.getElementById('gallery-cell-' + (cellnum - 1).toString()).textContent; 
+                            let starter = await document.getElementById('gallery-cell-' + (cellnum - 1).toString()).textContent; 
+                            //console.log(await starter)
+                            console.log(await new XmlBeautify().beautify(await starter, {indent: '&nbsp; &nbsp; &nbsp;', useSelfClosingElement: true}).toString());
+                            document.getElementById('gallery-cell-' + cellnum.toString()).textContent = await new XmlBeautify().beautify(await starter, {indent: '&nbsp; &nbsp; &nbsp;', useSelfClosingElement: true}).toString();
+                        };
+                        */
+                        
+                        document.getElementById('gallery-cell-0').innerText = await 'Документ загружается, подождите ...';
                         let uri = 'https://localhost:7068/uploading/getsmevtext?';
                         let versionDocument = document.getElementsByClassName('ver-list-input')[0].value;
                         let numberDocument = document.getElementsByClassName('num-list-input')[0].value;
                         let typeDocument = document.getElementsByClassName('type-list-input')[0].value;
                         await fetch(uri + 'VersionDocument=' + versionDocument + '&NumberDocument=' + numberDocument + '&TypeDocument=' + typeDocument)
                           .then((response) => response.json())
-                          .then((data) => document.getElementById('gallery-cell-first').innerText = new XmlBeautify().beautify(data.xml, {indent: '&nbsp; &nbsp; &nbsp;', useSelfClosingElement: true}).toString());
-                        
-                        
-                        
-                        
-                        
-                        
+                          .then((data) => document.getElementById('gallery-cell-0').innerText = new XmlBeautify().beautify(data.xml, {indent: '&nbsp; &nbsp; &nbsp;', useSelfClosingElement: true}).toString());
                     /* let request = { Uri: 'https://unp.bars.group/release/api/smev',
                       IsRelease: document.getElementById('release').checked,
                       VersionDocument: document.getElementById('doc-ver-list').options[getElementById('doc-ver-list').selectedIndex].value };
@@ -332,13 +331,21 @@
                 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
                 <script> if (document.location.search.match(/type=embed/gi)) { window.parent.postMessage("resize", "*");} </script>
             </head>
-            <body translate="no">
-                <div class="gallery js-flickity flickity-enabled is-draggable gallery-smev" data-flickity-options="{ &quot;wrapAround&quot;: true }" tabindex="0">
-                    <div id="gallery-cell-first" class="gallery-cell">first</div> <!-- F12 F12 -->
-                    <div id="gallery-cell-last" class="gallery-cell">last</div>
-                </div>
-            <script id="rendered-js-twinhead"></script>
-            </body>
+        <body translate="no">
+            <div class="gallery js-flickity flickity-enabled is-draggable smev-gallery" data-flickity-options="{ &quot;wrapAround&quot;: true }" tabindex="0">
+                <div id="gallery-cell-0" class="gallery-cell smev-counter">0</div> <!-- F12 F12 -->
+                <div id="gallery-cell-1" class="gallery-cell smev-counter">1</div>
+                <div id="gallery-cell-2" class="gallery-cell smev-counter">2</div>
+                <div id="gallery-cell-3" class="gallery-cell smev-counter">3</div>
+                <div id="gallery-cell-4" class="gallery-cell smev-counter">4</div>
+                <div id="gallery-cell-5" class="gallery-cell smev-counter">5</div>
+                <div id="gallery-cell-6" class="gallery-cell smev-counter">6</div>
+                <div id="gallery-cell-7" class="gallery-cell smev-counter">7</div>
+                <div id="gallery-cell-8" class="gallery-cell smev-counter">8</div>
+                <div id="gallery-cell-9" class="gallery-cell smev-counter">9</div>
+            </div>
+        <script id="rendered-js-twinhead"></script>
+        </body>
         </html><div></div>
         <div>
             <button class="smev-button-download">
