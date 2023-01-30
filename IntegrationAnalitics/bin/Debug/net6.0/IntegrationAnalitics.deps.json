@@ -709,11 +709,6 @@
           "IntegrationAnalitics.Infrastructure.Information.dll": {}
         }
       },
-      "IntegrationAnalitics.Infrastructure.Uploading/1.0.0": {
-        "runtime": {
-          "IntegrationAnalitics.Infrastructure.Uploading.dll": {}
-        }
-      },
       "IntegrationAnalitics.Infrastructure.Validation/1.0.0": {
         "runtime": {
           "IntegrationAnalitics.Infrastructure.Validation.dll": {}
@@ -1165,11 +1160,6 @@
       "sha512": ""
     },
     "IntegrationAnalitics.Infrastructure.Information/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "IntegrationAnalitics.Infrastructure.Uploading/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

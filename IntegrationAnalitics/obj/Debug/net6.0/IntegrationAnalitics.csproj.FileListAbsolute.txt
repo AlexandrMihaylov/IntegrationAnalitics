@@ -95,9 +95,7 @@ C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\S
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Database.dll
-C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.dll
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Database.pdb
-C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Uploading.pdb
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\obj\Debug\net6.0\IntegrationAnalitics.MvcApplicationPartsAssemblyInfo.cs
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Information.dll
 C:\Projects\Иван\IntegrationAnalitic\IntegrationAnalitics\bin\Debug\net6.0\IntegrationAnalitics.Infrastructure.Validation.dll
