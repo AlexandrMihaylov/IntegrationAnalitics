@@ -89,9 +89,7 @@
                             <script>
                                 async function fetchload() {
                                     var x = document.getElementsByClassName("api-navi-body-el-text").item.length
-                                    for (int i = 0; i < x; i++){
-                                        document.getElementsByClassName("api-navi-body-el-text")[i].
-                                    }
+                                    
                                     let url = ('https://localhost:7066/uploading/getApi?ApiName=epbs_rp_events');
                                     console.log("Запуск фетч...");
                                     let responce = await fetch(url, {
@@ -99,6 +97,8 @@
                                         mode: "no-cors",
                                         referrerPolicy: "unsafe-url"
                                     });
+                                    divv = document.getElementById("gallery-cell-1");
+                                    divv.innerHTML = responce.text.toString;
                                     console.log(responce);
                                     console.log("Получение ответа в json...");
                                     let answer = await responce;
@@ -138,7 +138,7 @@
 
                         <body translate="no">
                             <div class="gallery js-flickity flickity-enabled is-draggable" data-flickity-options="{ &quot;wrapAround&quot;: true }" tabindex="0">
-                                <div class="gallery-cell" style="font-size: 5em">Мне</div>
+                                <div class="gallery-cell" style="font-size: 5em" id="gallery-cell-1">Мне</div>
                                 <div class="gallery-cell" style="font-size: 5em">этот</div>
                                 <div class="gallery-cell" style="font-size: 5em">мир</div>
                                 <div class="gallery-cell" style="font-size: 5em">абсолютно</div>

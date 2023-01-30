@@ -8,5 +8,5 @@ namespace IntegrationAnalitics.Application.Domain.Responses.Uploading;
 
 public class GetApiResponse : BaseResponse
 {
-    public List<string>? ApiXml { get; set; }
+    public string? ApiXml { get; set; }
 }

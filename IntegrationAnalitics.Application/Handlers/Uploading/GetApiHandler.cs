@@ -21,7 +21,7 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
     {
         _httpClientFactory = httpClientFactory;
     }
-    private async Task<string> GetXmlData(string id) 
+    private string GetXmlData(string id) 
     {
         using HttpClient client = _httpClientFactory.CreateClient();
         
@@ -51,10 +51,9 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
             string askedMethod = request.ApiName;
             string httpRequest = baseUrl + askedMethod;
             var message = new HttpRequestMessage(HttpMethod.Post, httpRequest);
-            //message.RequestUri = new Uri(httpRequest);
             message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
             message.Headers.Add("Connection", "keep-alive");
-
+            string xmlResult;
         using (HttpResponseMessage response = client.SendAsync(message).GetAwaiter().GetResult())
         {
             using (HttpContent content = response.Content)
@@ -65,19 +64,13 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
                 {
                     resultNumber += json[i].ToString();
                 }
-                var xmlResult = GetXmlData(resultNumber);
+                xmlResult = GetXmlData(resultNumber);
             }
         }
 
-        //var result = await client.SendAsync(message).GetAwaiter().GetResult();
-        //    string response = String.Empty;
-        //    using (var sr = new StreamReader(await result.Content.ReadAsStreamAsync(), Encoding.GetEncoding("utf-8")))
-        //    {
-        //        response = sr.ReadToEnd();
-        //    }
         //}
         //catch (Exception e) { Console.WriteLine(e); }
-        return new GetApiResponse() { Success = true, ApiXml = null };
+        return new GetApiResponse() { Success = true, ApiXml = xmlResult};
         
     }
 }
