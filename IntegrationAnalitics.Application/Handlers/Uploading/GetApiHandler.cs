@@ -47,14 +47,16 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
     }
     public async Task<GetApiResponse> Handle(GetApiRequest request, CancellationToken cancellationToken)
     {
-       
+
         using HttpClient client = _httpClientFactory.CreateClient();
         string askedMethod = request.ApiName;
         string httpRequest = baseUrl + askedMethod;
+        string xmlResult;
+
         var message = new HttpRequestMessage(HttpMethod.Post, httpRequest);
         message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
         message.Headers.Add("Connection", "keep-alive");
-        string xmlResult;
+
         string resultNumber = string.Empty;
         using (HttpResponseMessage response = client.SendAsync(message).GetAwaiter().GetResult())
         {
