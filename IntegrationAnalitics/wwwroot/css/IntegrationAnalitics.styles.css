@@ -71,7 +71,7 @@
 }
 .cardqa:hover{
     background: rgba(255, 255, 255, 1);
- }
+}
 .cardqa-line{
     width: 100%;
     border-bottom: 1px solid gray;
@@ -156,9 +156,9 @@
     width: 100%;
     height: 100vh;
 }
-.uploading-api-navi{    
+.uploading-api-navi{
     padding: 20px;
-    height: 80%;
+    height: 75%;
     border-radius: 15px;
     width: 25%;
     margin-right: 30px;
@@ -221,6 +221,11 @@
 body { font-family: sans-serif; }
 .gallery {
     background: #EEE;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    max-height:90%;
 }
 .gallery-cell {
     width: 50%;
@@ -238,11 +243,6 @@ body { font-family: sans-serif; }
     color: white;
 }
 /*end external css: flickity.css*/
-
-
-
-
-
 .uploading-smev-wrapper{
     margin-top: 40px;
     margin-left: 41px;
@@ -252,8 +252,8 @@ body { font-family: sans-serif; }
     height: 100vh;
 }
 .uploading-smev-navi{
-    padding: 20px;
-    height: 80%;
+    padding: 15px;
+    height: 75%;
     border-radius: 15px;
     width: 25%;
     margin-right: 30px;
@@ -272,7 +272,7 @@ body { font-family: sans-serif; }
     margin-left: 10px;
 }
 .smev-navi-check{
-    
+
 }
 .smev-navi-fieldname{
     display: inline-block;
@@ -283,22 +283,19 @@ body { font-family: sans-serif; }
 }
 .navi-block-label{
     font-weight: 500;
-    margin-right: 5px;
-    margin-left: 10px;
-    display: block;
+    margin-top: 10%
 }
 .navi-block-brow{
     float: none;
     background: rgba(255, 255, 255, 1);
     border-radius: 25px;
-    padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 120px;
-    margin-right: 5px;
-    margin-left: 30px;
+    width: 100%;
+    height: 100%;
 }
 .stands { grid-area: stands; }
+.navi-title-label{ font-weight: bold; }
 .release { grid-area: release; }
 .bugfix { grid-area: bugfix; }
 .reserve { grid-area: reserve; }
@@ -318,30 +315,27 @@ body { font-family: sans-serif; }
 .base64-format-list { grid-area: base64-format-list; }
 .cell-smev-button-download { grid-area: cell-smev-button-download; }
 .cell-smev-button-code { grid-area: cell-smev-button-code; }
-
-
 .grid-container {
     display: grid;
     grid-template-areas:
-    'stands release bugfix reserve reserve reserve'
-    'doc-ver doc-ver doc-ver-list doc-ver-list doc-ver-list doc-ver-list'
-    'doc-num doc-num doc-num-list doc-num-list doc-num-list doc-num-list'
-    'doc-type doc-type doc-type-list doc-type-list doc-type-list doc-type-list'
-    'type type type-list type-list type-list type-list'
-    'subj-code subj-code subj-code-list subj-code-list subj-code-list subj-code-list'
-    'time time time-list time-list time-list time-list'
-    'base64-format base64-format base64-format-list base64-format-list base64-format-list base64-format-list'
-    'cell-smev-button-download cell-smev-button-download cell-smev-button-code cell-smev-button-code cell-smev-button-code cell-smev-button-code';
+    'stands release bugfix reserve'
+    'doc-ver doc-ver doc-ver-list doc-ver-list'
+    'doc-num doc-num doc-num-list doc-num-list'
+    'doc-type doc-type doc-type-list doc-type-list'
+    'type type type-list type-list'
+    'subj-code subj-code subj-code-list subj-code-list'
+    'time time time-list time-list'
+    'base64-format base64-format base64-format-list base64-format-list'
+    'cell-smev-button-download cell-smev-button-download cell-smev-button-code cell-smev-button-code';
     gap: 10px;
-    background-color: #2196F3;
-    padding: 10px;
     text-align: left;
+    width: 100%;
+    height: 100%;
 }
-
 .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     /*text-align: center;*/
-    padding: 20px 0;
+    padding: 0 0;
     font-size: 100%;
 }
 .navi-stand-check{
@@ -356,12 +350,10 @@ body { font-family: sans-serif; }
     padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 120px;
-    margin-right: 5px;
-    margin-left: 30px;
+    width: 100%;
+    height: 100%;
 }
 .smev-button-code{
-    margin-left: 5px;
     float: right;
 }
 .smev-navi-body{
@@ -414,7 +406,7 @@ body { font-family: sans-serif; }
 }
 .validation-panel{
     padding: 20px;
-    height: 29%;
+    height: 24%;
     border-radius: 15px;
     width: 100%;
     margin-right: 30px;
@@ -432,19 +424,21 @@ body { font-family: sans-serif; }
 }
 .validation-button{
     background: rgba(255, 255, 255, 1);
-    padding: 5px;
+    padding: 10px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
 }
 .validation-panel-template{
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.7);
-    margin-top: -11%;
+    margin-top: -14%;
     display: block;
     border-radius: 15px;
     padding: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 .template-head-name_doc{ grid-area: template-head-name_doc; font-weight: bold; text-align: left; margin-left: 10%;}
 .template-head-date_add{ grid-area: template-head-date_add; font-weight: bold; text-align: center;}
@@ -456,7 +450,7 @@ body { font-family: sans-serif; }
     grid-template-areas:
         'template-head-name_doc template-head-date_add template-head-date_valid template-head-status template-head-output';
     grid-template-rows: auto;
-    grid-template-columns: 35% 21% 21% auto auto;
+    grid-template-columns: 34% 21% 21% auto auto;
     gap: 10px;
     text-align: left;
     margin-right: 5%;
@@ -523,6 +517,8 @@ body { font-family: sans-serif; }
 .panel-button-circle{
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
 }
 .panel-button-rectangle{
     background: rgba(255, 255, 255, 0.5);

@@ -8,7 +8,7 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()/*.AddJsonOptions((option) => { option.JsonSerializerOptions.DefaultBufferSize = Int32.MaxValue; })*/;
 builder.Services.AddControllers();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructureDatabase(builder.Configuration);
