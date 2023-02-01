@@ -15,7 +15,7 @@ namespace IntegrationAnalitics.Application.Handlers.Uploading;
 
 internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
 {
-    private readonly string baseUrl = "http://192.168.233.29:30002/api/v3/public/dataRequestTask/";
+    private string baseUrl /*= "http://192.168.233.29:30002/api/v3/private/dataRequestTask/"*/;
     private readonly IHttpClientFactory _httpClientFactory = null!;
     public GetApiHandler(IHttpClientFactory httpClientFactory)
     {
@@ -32,32 +32,47 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
         message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
         message.Headers.Add("Connection", "keep-alive");
         string result = string.Empty;
-
+        //client.Timeout = TimeSpan.FromMinutes(10);
+        //client.MaxResponseContentBufferSize = 29999999;
         using (HttpResponseMessage response = client.SendAsync(message).GetAwaiter().GetResult())
         {
             using (HttpContent content = response.Content)
             {
                 var json = content.ReadAsStringAsync().GetAwaiter().GetResult();
-                result = json;
+                 result = json;
             }
         }
-
-
         return result;
     }
     public async Task<GetApiResponse> Handle(GetApiRequest request, CancellationToken cancellationToken)
     {
 
         using HttpClient client = _httpClientFactory.CreateClient();
+        int counter = 0;
+        if (request.IsPrivate == true)
+        {
+            baseUrl = "http://192.168.233.29:30002/api/v" + request.ApiVersion + "/private/dataRequestTask/";
+        }
+        else
+        {
+            baseUrl = "http://192.168.233.29:30002/api/v" + request.ApiVersion + "/public/dataRequestTask/";
+        }
+
         string askedMethod = request.ApiName;
-        string httpRequest = baseUrl + askedMethod;
+
         string xmlResult;
+        string resultNumber = string.Empty;
+
+
+        string httpRequest = baseUrl + askedMethod;
+
 
         var message = new HttpRequestMessage(HttpMethod.Post, httpRequest);
         message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
         message.Headers.Add("Connection", "keep-alive");
+        //client.MaxResponseContentBufferSize = 29999999;
 
-        string resultNumber = string.Empty;
+
         using (HttpResponseMessage response = client.SendAsync(message).GetAwaiter().GetResult())
         {
             using (HttpContent content = response.Content)
@@ -71,8 +86,8 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
                         resultNumber += json[i].ToString();
                     }
                     xmlResult = GetXmlData(resultNumber);
-                    System.Threading.Thread.Sleep(3000);
-                } while (xmlResult == null || xmlResult == "");
+                    System.Threading.Thread.Sleep(2000);
+                } while ((xmlResult == null || xmlResult == "") && resultNumber.Length == 5);
             }
         }
 

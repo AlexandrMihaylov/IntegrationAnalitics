@@ -12,4 +12,6 @@ public class GetApiRequest: BaseRequest, IRequest<GetApiResponse>
 {
     //public string ApiId { get; set; }
     public string ApiName { get; set; }
+    public string ApiVersion { get; set; }
+    public bool IsPrivate { get; set; }
 }
