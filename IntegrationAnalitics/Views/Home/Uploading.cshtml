@@ -59,7 +59,7 @@
         <div class="api-navi-body">
             @{
                 int i = 0;
-                List<string> methodsV3 = new List<string> { "epbs_np", "epbs_fp", "epbs_fp_events", "epbs_np_participants", "epbs_fp_participants", "epbs_fp_fin_sources_all",
+                List<string> methods = new List<string> { "epbs_np", "epbs_fp", "epbs_fp_events", "epbs_np_participants", "epbs_fp_participants", "epbs_fp_fin_sources_all",
             "epbs_rp", "epbs_rp_participants", "epbs_rp_events", "epbs_document_types", "epbs_program", "epbs_bp_okei", "epbs_organization_roiv",
             "epbs_rf_subject", "mu_np_tasks", "mu_np_purposes", "mu_np_fin_sources", "mu_fp_tasks", "mu_fp_results", "mu_fp_purposes", "mu_fp_fin_sources", "mu_fp_check_points",
             "mu_fp_fin_sources_month", "mu_natgoal", "fp_results_other_project_new", "MuFpFinSourcesAll", "MuRpFinSourcesAll", "mu_rp_tasks", "mu_rp_purposes", "mu_rp_results",
@@ -93,7 +93,7 @@
             "mu_npfppurposecriteriaprivate", "mu_resultsprivate", "mu_checkpointsprivate", "mu_checkpoints_rpprivate", "epbs_program_rpprivate", "fbexecutionmonthlyprivate", 
             "indicator_gosprograms_fpprivate", "epbs_subprogram_fpprivate", "monitoring_redistribution_reportprivate"};
 
-                foreach (var method in methodsV3)
+                foreach (var method in methods)
                 {
                     if (method.EndsWith("private"))
                     {
