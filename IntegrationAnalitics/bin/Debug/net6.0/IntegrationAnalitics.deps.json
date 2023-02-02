@@ -10,7 +10,6 @@
         "dependencies": {
           "IntegrationAnalitics.Application": "1.0.0",
           "IntegrationAnalitics.Infrastructure.Database": "1.0.0",
-          "IntegrationAnalitics.Infrastructure.Uploading": "1.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.5.0",
           "Swashbuckle.AspNetCore.SwaggerUI": "6.5.0"
@@ -695,8 +694,6 @@
         "dependencies": {
           "IntegrationAnalitics.Application": "1.0.0",
           "IntegrationAnalitics.Infrastructure.Information": "1.0.0",
-          "IntegrationAnalitics.Infrastructure.Uploading": "1.0.0",
-          "IntegrationAnalitics.Infrastructure.Validation": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1"
         },
@@ -707,11 +704,6 @@
       "IntegrationAnalitics.Infrastructure.Information/1.0.0": {
         "runtime": {
           "IntegrationAnalitics.Infrastructure.Information.dll": {}
-        }
-      },
-      "IntegrationAnalitics.Infrastructure.Validation/1.0.0": {
-        "runtime": {
-          "IntegrationAnalitics.Infrastructure.Validation.dll": {}
         }
       }
     }
@@ -1160,11 +1152,6 @@
       "sha512": ""
     },
     "IntegrationAnalitics.Infrastructure.Information/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "IntegrationAnalitics.Infrastructure.Validation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

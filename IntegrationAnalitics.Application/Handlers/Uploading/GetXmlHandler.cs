@@ -14,23 +14,38 @@ public class GetXmlHandler : IRequestHandler<GetXmlRequest, GetXmlResponse>
     private string _TAG_DOCUMENTTYPE = "__DOCUMENTTYPE__";
     private string _xmlTemplate = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><UNPDocument xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"urn://x-artefacts-minfin-unp/__VERSION__\"> <DocumentNumber>__DOCUMENTNUMBER__</DocumentNumber> <DocumentType>__DOCUMENTTYPE__</DocumentType> <CreateNew>true</CreateNew> </UNPDocument>";
     private readonly IHttpClientFactory _httpClientFactory = null!;
+   
+    /// <summary>
+    /// GetXmlHandler
+    /// </summary>
+    /// <param name="httpClientFactory"></param>
     public GetXmlHandler(IHttpClientFactory httpClientFactory)
     {
-        _httpClientFactory = httpClientFactory;
+        _httpClientFactory = httpClientFactory ?? throw new ArgumentException(nameof(httpClientFactory));
     }
 
+    /// <summary>
+    /// Handle
+    /// </summary>
+    /// <param name="request"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     public async Task<GetXmlResponse> Handle(GetXmlRequest request, CancellationToken cancellationToken)
     {
-        _xmlTemplate = _xmlTemplate.Replace(_TAG_VERSION, request.VersionDocument);
-        _xmlTemplate = _xmlTemplate.Replace(_TAG_DOCUMENTNUMBER, request.NumberDocument);
-        _xmlTemplate = _xmlTemplate.Replace(_TAG_DOCUMENTTYPE, request.TypeDocument);
+        _xmlTemplate = _xmlTemplate
+            .Replace(_TAG_VERSION, request.VersionDocument)
+            .Replace(_TAG_DOCUMENTNUMBER, request.NumberDocument)
+            .Replace(_TAG_DOCUMENTTYPE, request.TypeDocument);
 
         using HttpClient client = _httpClientFactory.CreateClient();
+
         var message = new HttpRequestMessage();
         message.Content = new StringContent(_xmlTemplate);
-        client.BaseAddress = new Uri("https://unp.bars.group/release/api/smev");//Uri
+
+        client.BaseAddress = new Uri("https://unp.bars.group/release/api/smev");
         var result = await client.SendAsync(message);
-        string response;
+
+        string response = string.Empty;
         using (var sr = new StreamReader(await result.Content.ReadAsStreamAsync(), Encoding.GetEncoding("utf-8")))
         {
             response = sr.ReadToEnd();
