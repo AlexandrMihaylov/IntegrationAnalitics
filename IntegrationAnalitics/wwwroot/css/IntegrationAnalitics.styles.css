@@ -220,23 +220,19 @@
 }
 body { font-family: sans-serif; }
 .gallery {
-    /*background: #EEE;*/
-    width: 200%;
-    height: 90%;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.9);
-}
-.gallery > div {
-    height: 100%;
+    background: #EEE;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+    max-height:90%;
 }
 .gallery-cell {
     width: 50%;
-    height: 400px;
+    height: 9em;
     margin-right: 10px;
+    background: #8C8;
     counter-increment: gallery-cell;
-    overflow-y: auto;
-    font-size: 150%;
-    padding: 2%;
 }
 /* cell number */
 .gallery-cell:before {
@@ -249,34 +245,19 @@ body { font-family: sans-serif; }
 /*end external css: flickity.css*/
 .uploading-smev-wrapper{
     margin-top: 40px;
-    /*margin-left: 41px;*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*height: 100vh;*/
-
-    display: grid;
-    grid-template-areas:
-        'template-head-name_doc template-head-date_add';
-    grid-template-rows: auto;
-    grid-template-columns: 30% 70%;/* auto 31% */
-    gap: 10px;
-    text-align: left;
-    margin-right: 5%;
-    font-size: 0.75em;
-    width: calc(100% - 20px);
-    margin-left: 20px;
-    padding: 0;
-      
-}
-.uploading-smev-wrapper > div{
-    height: 120%;
+    margin-left: 41px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
 }
 .uploading-smev-navi{
-    padding: 7%;
+    padding: 15px;
     height: 75%;
     border-radius: 15px;
-    /*background: white;*/
-    background-color: rgba(255, 255, 255, 0.6);
+    width: 25%;
+    margin-right: 30px;
+    background: white;
     opacity: 1;
 }
 .smev-navi-header{
@@ -301,8 +282,8 @@ body { font-family: sans-serif; }
     margin-bottom: 20px;
 }
 .navi-block-label{
-    margin-top: 10%;
-    font-size: 125%;
+    font-weight: 500;
+    margin-top: 10%
 }
 .navi-block-brow{
     float: none;
@@ -319,21 +300,9 @@ body { font-family: sans-serif; }
 .bugfix { grid-area: bugfix; }
 .reserve { grid-area: reserve; }
 .doc-ver { grid-area: doc-ver; }
-
-.doc-ver-list { grid-area: doc-ver-list;}
-input {width: 60%;}
-.ver-list-template{
-    margin-top: 10%;
-    margin-left: 20%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-color: black;
-}
-select { border: none; }
+.doc-ver-list { grid-area: doc-ver-list; }
 .doc-num { grid-area: doc-num; }
-.doc-num-list { grid-area: doc-num-list;}
-select{ width: 11%; }
+.doc-num-list { grid-area: doc-num-list; }
 .doc-type { grid-area: doc-type; }
 .doc-type-list { grid-area: doc-type-list; }
 .type { grid-area: type; }
@@ -358,21 +327,19 @@ select{ width: 11%; }
     'time time time-list time-list'
     'base64-format base64-format base64-format-list base64-format-list'
     'cell-smev-button-download cell-smev-button-download cell-smev-button-code cell-smev-button-code';
-    gap: 2%;
+    gap: 10px;
     text-align: left;
+    width: 100%;
     height: 100%;
-    grid-template-columns: 23% 23% 23% 25%;
-    /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 .grid-container > div {
-    /*background-color: rgba(255, 255, 255, 0.8);*/
+    background-color: rgba(255, 255, 255, 0.8);
     /*text-align: center;*/
     padding: 0 0;
     font-size: 100%;
 }
 .navi-stand-check{
     display:inline-block;
-    width: 30%;
 }
 .smev-naiv-cache{
     margin-left: 20px;
@@ -383,9 +350,11 @@ select{ width: 11%; }
     padding: 5px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 75%;
+    width: 100%;
     height: 100%;
-    margin-left: 15%;
+}
+.smev-button-code{
+    float: right;
 }
 .smev-navi-body{
     height: calc(97% - 30px);
@@ -400,54 +369,13 @@ select{ width: 11%; }
 .smev-navi-body-el-text{
     margin-left: 10px;
 }
-
-.smev-wrapper-right{
-    /*height: 30%;*/
-    border-radius: 15px;
-    /*background: white;*/
-    background-color: rgba(255, 255, 255, 0.6);
-    opacity: .7;
-    /*display: grid;*/
-    margin-right: 5%;
-    width: calc(100% - 20px);
-    padding: 1%;
-}
-
-
 .uploading-smev-files{
-    /*height: 30%;*/
-    /*
+    height: 80%;
     border-radius: 15px;
+    margin-right: 40px;
+    width: calc(75% - 30px - 41px - 40px);
     background: white;
-    */
     opacity: .7;
-    display: grid;
-    grid-template-areas:
-        'template-head-name_doc qwe'
-        'template-head-date_add template-head-date_add2';
-    
-    grid-template-rows: calc(95% - 10px) 5%;
-    grid-template-columns: auto auto; /* auto 31% */
-    
-    gap: 10px;
-    text-align: left;
-    font-size: 0.75em;
-    padding: 0;
-    height: 100%;
-}
-.uploading-smev-files > div{
-    /*height: 15%;*/
-}
-.smev-files-button{
-    width: 10%;
-    
-}
-.files-button-archive{
-    float: right;
-    margin-right: 40%;
-}
-.files-button-download{
-    margin-left: 40%;
 }
 /*endregion*/
 /*region*/

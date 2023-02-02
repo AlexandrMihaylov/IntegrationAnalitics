@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z2q1xZcCVpZhYjGG1pvn4LfKmyDX5x0B0CAR7+qKo6M=",
+  "Hash": "Xq2Kd+A6qvR/xjUP9YmJLq4QHoA+6cQLsZIdzFpuUlg=",
   "Source": "IntegrationAnalitics",
   "BasePath": "_content/IntegrationAnalitics",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\imgs\\background.jpg"
     },
     {
+      "Identity": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\wwwroot\\js\\documentTypeListFiller.js",
+      "SourceId": "IntegrationAnalitics",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\wwwroot\\",
+      "BasePath": "_content/IntegrationAnalitics",
+      "RelativePath": "js/documentTypeListFiller.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\documentTypeListFiller.js"
+    },
+    {
       "Identity": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\wwwroot\\js\\flickity.js",
       "SourceId": "IntegrationAnalitics",
       "SourceType": "Discovered",
@@ -185,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\validationGridFill.js"
+    },
+    {
+      "Identity": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\wwwroot\\js\\XmlBeautify.js",
+      "SourceId": "IntegrationAnalitics",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\wwwroot\\",
+      "BasePath": "_content/IntegrationAnalitics",
+      "RelativePath": "js/XmlBeautify.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\XmlBeautify.js"
     },
     {
       "Identity": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
