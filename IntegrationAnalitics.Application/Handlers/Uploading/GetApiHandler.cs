@@ -13,7 +13,6 @@ using System.Xml.Linq;
 
 namespace IntegrationAnalitics.Application.Handlers.Uploading;
 
-
 internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
 {
     private string baseUrl /*= "http://192.168.233.29:30002/api/v3/private/dataRequestTask/"*/;
@@ -92,9 +91,9 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
             }
         }
 
+
         var xml = XDocument.Parse(xmlResult);
-        
-        xml.Save("C:\\Users\\%Username%\\Downloads\\result.xml");
+        xml.Save("result.xml");
         
         //using (var sr = new StreamReader(await resultNumber.Content.ReadAsStreamAsync(), Encoding.GetEncoding("utf-8")))
         //{
