@@ -1,7 +1,12 @@
 ﻿using IntegrationAnalitics.Application.Domain.Requests.Uploading;
+using IntegrationAnalitics.Application.Domain.Responses;
 using IntegrationAnalitics.Application.Domain.Responses.Uploading;
 using MediatR;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.VisualBasic;
+
+using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,98 +14,101 @@ using System.Net.Http;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace IntegrationAnalitics.Application.Handlers.Uploading;
 
+/// <summary>
+/// GetApiHandler
+/// </summary>
 internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
 {
-    private string baseUrl /*= "http://192.168.233.29:30002/api/v3/private/dataRequestTask/"*/;
+    private readonly string _apiKey = "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E";
+    private readonly string _connectionHttp = "keep-alive";
+    private readonly string _getDocumentMethod = "/data";
+    private readonly string _baseUrl = "http://192.168.233.29:30002/api/";
+    private readonly string _sectionPrivate = "/private/";
+    private readonly string _sectionPublic = "/public/";
+    private readonly string _dataRequestTask = "dataRequestTask/";
     private readonly IHttpClientFactory _httpClientFactory = null!;
+
+    /// <summary>
+    /// GetApiHandler
+    /// </summary>
+    /// <param name="httpClientFactory"></param>
     public GetApiHandler(IHttpClientFactory httpClientFactory)
     {
-        _httpClientFactory = httpClientFactory;
+        _httpClientFactory = httpClientFactory ?? throw new ArgumentException(nameof(httpClientFactory));
     }
-    private string GetXmlData(string id)
-    {
-        using HttpClient client = _httpClientFactory.CreateClient();
 
-        string getMethod = "/data";
-        string httpRequest = baseUrl + id + getMethod;
-        var message = new HttpRequestMessage();
-        message.RequestUri = new Uri(httpRequest);
-        message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
-        message.Headers.Add("Connection", "keep-alive");
-        string result = string.Empty;
-        //client.Timeout = TimeSpan.FromMinutes(10);
-        //client.MaxResponseContentBufferSize = 29999999;
-        using (HttpResponseMessage response = client.SendAsync(message).GetAwaiter().GetResult())
-        {
-            using (HttpContent content = response.Content)
-            {
-                var json = content.ReadAsStringAsync().GetAwaiter().GetResult();
-                 result = json;
-            }
-        }
-        return result;
-    }
+    /// <summary>
+    /// Handle
+    /// </summary>
+    /// <param name="request"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     public async Task<GetApiResponse> Handle(GetApiRequest request, CancellationToken cancellationToken)
     {
-
         using HttpClient client = _httpClientFactory.CreateClient();
-        int counter = 0;
-        if (request.IsPrivate == true)
-        {
-            baseUrl = "http://192.168.233.29:30002/api/v" + request.ApiVersion + "/private/dataRequestTask/";
-        }
-        else
-        {
-            baseUrl = "http://192.168.233.29:30002/api/v" + request.ApiVersion + "/public/dataRequestTask/";
-        }
 
-        string askedMethod = request.ApiName;
+        string url = string.Empty;
+        url = _baseUrl + "v" + request.ApiVersion + request.SectionAccess + _dataRequestTask;
 
-        string xmlResult;
-        string resultNumber = string.Empty;
+        var resultNumber = await GetXmlNumber(client, url, request.ApiName);
 
+        if (resultNumber.TaskId is null)
+            return new GetApiResponse { Success = false, Message = "Не получилось запросить номер документа" };
 
-        string httpRequest = baseUrl + askedMethod;
-        
+        var xmlResult = await GetXmlData(resultNumber.TaskId.Value, url);
 
-        var message = new HttpRequestMessage(HttpMethod.Post, httpRequest);
-        message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
-        message.Headers.Add("Connection", "keep-alive");
-        //client.MaxResponseContentBufferSize = 29999999;
+        if (xmlResult is null)
+            return new GetApiResponse() { Success = false, Message = "Не получилось собрать документ" };
 
+        return new GetApiResponse() { Success = true, ApiXml = xmlResult };
+    }
 
-        using (HttpResponseMessage response = client.SendAsync(message).GetAwaiter().GetResult())
+    private async Task<TaskApiResponse> GetXmlNumber(HttpClient client, string url, string name)
+    {
+        var message = new HttpRequestMessage(HttpMethod.Post, url + name);
+        message.Headers.Add("x-api-key", _apiKey);
+        message.Headers.Add("Connection", _connectionHttp);
+        TaskApiResponse taskResponse = null;
+
+        using (HttpResponseMessage response = await client.SendAsync(message))
         {
             using (HttpContent content = response.Content)
             {
-                do
-                {
-                    var json = content.ReadAsStringAsync().GetAwaiter().GetResult();
-                    resultNumber = String.Empty;
-                    for (int i = 10; i < json.Length - 1; i++)
-                    {
-                        resultNumber += json[i].ToString();
-                    }
-                    xmlResult = GetXmlData(resultNumber);
-                    System.Threading.Thread.Sleep(2000);
-                } while ((xmlResult == null || xmlResult == "") && resultNumber.Length == 5);
+                var resultContent = await content.ReadAsStringAsync();
+                taskResponse = JsonConvert.DeserializeObject<TaskApiResponse>(resultContent);
             }
         }
 
+        return taskResponse;
+    }
 
-        var xml = XDocument.Parse(xmlResult);
-        xml.Save("result.xml");
-        
-        //using (var sr = new StreamReader(await resultNumber.Content.ReadAsStreamAsync(), Encoding.GetEncoding("utf-8")))
-        //{
-        //    xmlResult = sr.ReadToEnd();
-        //}
+    /// <summary>
+    /// GetXmlData
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    private async Task<string> GetXmlData(int id, string url)
+    {
+        using HttpClient client = _httpClientFactory.CreateClient();
 
-        return new GetApiResponse() { Success = true, ApiXml = xmlResult };
+        var message = new HttpRequestMessage();
+        message.RequestUri = new Uri(url + id + _getDocumentMethod);
+        message.Headers.Add("x-api-key", _apiKey);
+        message.Headers.Add("Connection", _connectionHttp);
 
+        string result = string.Empty;
+        using (HttpResponseMessage response = await client.SendAsync(message))
+        {
+            using (HttpContent content = response.Content)
+            {
+                var json = await content.ReadAsStringAsync();
+                result = json;
+            }
+        }
+
+        return result;
     }
 }

@@ -3,6 +3,9 @@ using MediatR;
 
 namespace IntegrationAnalitics.Application.Domain.Requests.Uploading;
 
+/// <summary>
+/// GetXmlRequest
+/// </summary>
 public class GetXmlRequest: BaseRequest, IRequest<GetXmlResponse>
 {
     //public string Uri { get; set; }

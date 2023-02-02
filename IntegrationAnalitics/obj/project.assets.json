@@ -1166,8 +1166,6 @@
         "dependencies": {
           "IntegrationAnalitics.Application": "1.0.0",
           "IntegrationAnalitics.Infrastructure.Information": "1.0.0",
-          "IntegrationAnalitics.Infrastructure.Uploading": "1.0.0",
-          "IntegrationAnalitics.Infrastructure.Validation": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1"
         },
@@ -1186,26 +1184,6 @@
         },
         "runtime": {
           "bin/placeholder/IntegrationAnalitics.Infrastructure.Information.dll": {}
-        }
-      },
-      "IntegrationAnalitics.Infrastructure.Uploading/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/IntegrationAnalitics.Infrastructure.Uploading.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IntegrationAnalitics.Infrastructure.Uploading.dll": {}
-        }
-      },
-      "IntegrationAnalitics.Infrastructure.Validation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/IntegrationAnalitics.Infrastructure.Validation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IntegrationAnalitics.Infrastructure.Validation.dll": {}
         }
       }
     }
@@ -2812,42 +2790,31 @@
       "type": "project",
       "path": "../IntegrationAnalitics.Infrastructure.Information/IntegrationAnalitics.Infrastructure.Information.csproj",
       "msbuildProject": "../IntegrationAnalitics.Infrastructure.Information/IntegrationAnalitics.Infrastructure.Information.csproj"
-    },
-    "IntegrationAnalitics.Infrastructure.Uploading/1.0.0": {
-      "type": "project",
-      "path": "../IntegrationAnalitics.Infrastructure.Uploading/IntegrationAnalitics.Infrastructure.Uploading.csproj",
-      "msbuildProject": "../IntegrationAnalitics.Infrastructure.Uploading/IntegrationAnalitics.Infrastructure.Uploading.csproj"
-    },
-    "IntegrationAnalitics.Infrastructure.Validation/1.0.0": {
-      "type": "project",
-      "path": "../IntegrationAnalitics.Infrastructure.Validation/IntegrationAnalitics.Infrastructure.Validation.csproj",
-      "msbuildProject": "../IntegrationAnalitics.Infrastructure.Validation/IntegrationAnalitics.Infrastructure.Validation.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "IntegrationAnalitics.Application >= 1.0.0",
       "IntegrationAnalitics.Infrastructure.Database >= 1.0.0",
-      "IntegrationAnalitics.Infrastructure.Uploading >= 1.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.5.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ваня\\.nuget\\packages\\": {}
+    "C:\\Users\\Администратор\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
+      "projectUniqueName": "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
       "projectName": "IntegrationAnalitics",
-      "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
-      "packagesPath": "C:\\Users\\Ваня\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics\\obj\\",
+      "projectPath": "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics\\IntegrationAnalitics.csproj",
+      "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ваня\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2861,14 +2828,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
-              "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
+            "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj": {
+              "projectPath": "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics.Application\\IntegrationAnalitics.Application.csproj"
             },
-            "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj": {
-              "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj"
-            },
-            "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Uploading\\IntegrationAnalitics.Infrastructure.Uploading.csproj": {
-              "projectPath": "C:\\Projects\\Иван\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Uploading\\IntegrationAnalitics.Infrastructure.Uploading.csproj"
+            "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj": {
+              "projectPath": "C:\\Projects\\БАРСГрупп\\Барс репозитории\\IntegrationAnalitic\\IntegrationAnalitics.Infrastructure.Database\\IntegrationAnalitics.Infrastructure.Database.csproj"
             }
           }
         }
