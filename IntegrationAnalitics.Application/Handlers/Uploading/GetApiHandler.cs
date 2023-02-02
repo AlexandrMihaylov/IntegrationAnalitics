@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace IntegrationAnalitics.Application.Handlers.Uploading;
 
@@ -65,7 +66,7 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
 
 
         string httpRequest = baseUrl + askedMethod;
-
+        
 
         var message = new HttpRequestMessage(HttpMethod.Post, httpRequest);
         message.Headers.Add("x-api-key", "C5EFE3F3-FD3B-4FA2-9E54-B0FFCD05646E");
@@ -91,6 +92,10 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
             }
         }
 
+        var xml = XDocument.Parse(xmlResult);
+        
+        xml.Save("C:\\Users\\%Username%\\Downloads\\result.xml");
+        
         //using (var sr = new StreamReader(await resultNumber.Content.ReadAsStreamAsync(), Encoding.GetEncoding("utf-8")))
         //{
         //    xmlResult = sr.ReadToEnd();
