@@ -9,16 +9,20 @@ using Newtonsoft.Json.Linq;
 using System.Text;
 using IntegrationAnalitics.Application.Domain.Requests.Uploading;
 using MediatR;
+using IntegrationAnalitics.Application.Models;
 
 namespace IntegrationAnalitics.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly ApiSmevModel _allMethods;
+        
 
     public HomeController(ILogger<HomeController> logger)
     {                                                       //вошёл в контроллер
         _logger = logger;
+        _allMethods = new ApiSmevModel();
     }
 
     public IActionResult Index()
@@ -37,7 +41,7 @@ public class HomeController : Controller
 
     public IActionResult Uploading()
     {
-        return View("Uploading");
+        return View("Uploading", _allMethods);
     }
     public IActionResult Validation()
     {

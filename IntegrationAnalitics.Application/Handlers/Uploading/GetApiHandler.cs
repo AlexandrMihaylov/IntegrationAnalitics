@@ -72,6 +72,7 @@ internal class GetApiHandler : IRequestHandler<GetApiRequest, GetApiResponse>
         message.Headers.Add("x-api-key", _apiKey);
         message.Headers.Add("Connection", _connectionHttp);
         TaskApiResponse taskResponse = null;
+        
 
         using (HttpResponseMessage response = await client.SendAsync(message))
         {
