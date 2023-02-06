@@ -10,7 +10,20 @@
                 </div>
             </div>
             <div class="stack">
-                <button class="validation-button panel-button-rectangle">
+                <button id="stack" class="validation-button panel-button-rectangle" onclick="
+                 async function validation(){
+                    let method = 'https://localhost:7067/validation/validationxml';
+                    let xsd = await document.getElementById('test2').value;
+                    let xml = await document.getElementById('test').value;
+                    params = await ('?' + 'Xsd=' + xsd + '&Xml=' + xml);
+                    url = method + params;
+                    await fetch(url)
+                        .then((response) => response.json())
+                        .then((data) => { if (data.result === 'Success') { document.getElementById('grid-body-status').innerHTML = 'V' } 
+                                            else { document.getElementById('grid-body-status').innerHTML = 'X'}
+                                        });
+                 };
+                validation();">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
                       <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"/>
                       <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"/>
@@ -32,13 +45,8 @@
                     </svg>
                 </button>
             </div>
-        <div class="xsd-label">
-            Загрузите XSD схему для валидации
-        </div>
-        <div class="xml-label">
-            Загрузите XML файл для валидации
-        </div>
-
+        <div class="xsd-label">Загрузите XSD схему для валидации</div>
+        <div class="xml-label">Загрузите XML файл для валидации</div>
         <div class="panel">
             <div class="validation-panel">
                 <button class="validation-panel-button panel-button-circle">
@@ -61,11 +69,68 @@
                         <div class="template-head-output">Вывод</div>
                     </div>
                     <div class="panel-template-scroll">
+                        <div><input id='test' hidden value="<?xml version='1.0'?>
+                            <shipOrder>
+                                <shipTo>
+                                    <name>Tove Svendson</name>
+                                    <street>Ragnhildvei 2</street>
+                                    <address>4000 Stavanger</address>
+                                    <country>Norway</country>
+                                </shipTo>
+                                <items>
+                                    <item>
+                                        <title>Empire Burlesque</title>
+                                        <quantity>1</quantity>
+                                        <price>10.90</price>
+                                    </item>
+                                    <item>
+                                        <title>Hide your heart</title>
+                                        <quantity>1</quantity>
+                                        <price>9.90</price>
+                                    </item>
+                                </items>
+                            </shipOrder>"/></div>
+                        <div><input id='test2' hidden value='<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                        
+                        <xs:element name="shipOrder" type="order"/>
+                        
+                        <xs:complexType name="order">
+                          <xs:sequence>
+                            <xs:element name="shipTo" type="shipAddress"/>
+                            <xs:element name="items" type="cdItems"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                        
+                        <xs:complexType name="shipAddress">
+                          <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="street" type="xs:string"/>
+                            <xs:element name="address" type="xs:string"/>
+                            <xs:element name="country" type="xs:string"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                        
+                        <xs:complexType name="cdItems">
+                          <xs:sequence>
+                            <xs:element name="item" type="cdItem"
+                                        maxOccurs="unbounded"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                        
+                        <xs:complexType name="cdItem">
+                          <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="quantity" type="xs:integer"/>
+                            <xs:element name="price" type="xs:decimal"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                        
+                        </xs:schema>'/></div>
                         <div class="panel-scroll-grid">
                             <div class="grid-body-name_doc">1. agreement.xsd - agreement.xml</div>
                             <div class="grid-body-date_add">15:06 21.12.2022</div>
                             <div class="grid-body-date_valid">15:06 21.12.2022</div>
-                            <div class="grid-body-status">
+                            <div id="grid-body-status" class="grid-body-status">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" color="red" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
                                     <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
                                     <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
@@ -85,5 +150,4 @@
             </div>
         </div>
         </div>
-        
 </div>
