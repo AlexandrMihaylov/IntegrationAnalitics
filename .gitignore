@@ -94,3 +94,8 @@ packages/*
 *.csproj.user
 /paket.lock
 *.DotSettings.user
+
+**/*.cache
+**/*.props
+**/*.json
+**/*.info
