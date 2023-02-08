@@ -367,3 +367,14 @@ FodyWeavers.xsd
 /.idea/.idea.FractalzBackend/.idea/vcs.xml
 /.idea/.idea.FractalzBackend/.idea/efCoreCommonOptions.xml
 /Fractalz/uploadedFiles
+
+**/.cache
+**/.editorconfig
+**/.cache
+**/.json
+**/.props
+**/.info
+**/AssemblyInfo.cs
+**/.dll
+**/.pdb
+**/.txt
