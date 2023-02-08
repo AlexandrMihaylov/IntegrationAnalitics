@@ -9,8 +9,6 @@
     <ItemGroup>
       <ProjectReference Include="..\IntegrationAnalitics.Application\IntegrationAnalitics.Application.csproj" />
       <ProjectReference Include="..\IntegrationAnalitics.Infrastructure.Information\IntegrationAnalitics.Infrastructure.Information.csproj" />
-      <ProjectReference Include="..\IntegrationAnalitics.Infrastructure.Uploading\IntegrationAnalitics.Infrastructure.Uploading.csproj" />
-      <ProjectReference Include="..\IntegrationAnalitics.Infrastructure.Validation\IntegrationAnalitics.Infrastructure.Validation.csproj" />
     </ItemGroup>
 
     <ItemGroup>

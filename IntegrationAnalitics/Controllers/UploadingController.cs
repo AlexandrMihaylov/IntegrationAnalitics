@@ -3,6 +3,10 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IntegrationAnalitics.Controllers;
+
+/// <summary>
+/// UploadingController
+/// </summary>
 [Route("/uploading/")]
 public class UploadingController : Controller
 {
@@ -12,36 +16,38 @@ public class UploadingController : Controller
     {
         _mediator = mediator;
     }
-    
+
+    /// <summary>
+    /// GetSmevText
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
     [HttpGet]
     [Route("getsmevtext")]
     public async Task<IActionResult> GetSmevText([FromQuery] GetXmlRequest request)
     {
         var response = await _mediator.Send(request);
-        Console.WriteLine(response.Xml);
+
         if (response.Success)
             return Ok(response);
 
         return BadRequest(response);
     }
 
+    /// <summary>
+    /// GetApi
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
     [HttpGet]
-    [Route("/uploading/getApi")]
+    [Route("getApi")]
     public async Task<IActionResult> GetApi([FromQuery] GetApiRequest request)
     {
         var response = await _mediator.Send(request);
-        Console.WriteLine(response.ApiXml);
+
         if (response.Success)
             return Ok(response);
 
         return BadRequest(response);
-    }
-
-    [HttpGet]
-    [Route("test")]
-    //https://localhost:7067/getXml?uri=''&xml=''
-    public async Task<IActionResult> Test()
-    {
-        return BadRequest();
     }
 }
