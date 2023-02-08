@@ -1,4 +1,5 @@
-﻿<div class="uploading-menu">
+﻿@model IntegrationAnalitics.Application.Models.ApiSmevModel
+<div class="uploading-menu">
     <a class="menu-link" onclick=visibilitySmevChange();>СМЭВ</a>
     <a class="menu-link" onclick=visibilityAPIChange();>API</a>
 
@@ -8,16 +9,23 @@
 <div hidden class="uploading-api-wrapper">
     <div class="uploading-api-navi">
         <div class="api-navi-header">
-            <label class="api-navi-label">V1</label>
-            <input class="api-navi-check" type="checkbox" id="checkbox-load-version-1" onchange="" />
-            <label class="api-navi-label">V2</label>
-            <input class="api-navi-check" type="checkbox" id="checkbox-load-version-2" />
-            <label class="api-navi-label">V3</label>
-            <input class="api-navi-check" type="checkbox" id="checkbox-load-version-3" />
-
+            <label class="api-navi-label">
+                V1
+                <input class="api-navi-check" type="checkbox" id="checkbox-load-version-1" value="1" onchange="" />
+            </label>
+            <label class="api-navi-label">
+                V2
+                <input class="api-navi-check" type="checkbox" id="checkbox-load-version-2" value="2" />
+            </label>
+            <label class="api-navi-label">
+                V3
+                <input class="api-navi-check" type="checkbox" id="checkbox-load-version-3" value="3" />
+            </label>
             <div class="api-naiv-cache">
-                <label>Кеш</label>
-                <input class="api-navi-check" type="checkbox" />
+                <label>
+                    Кеш
+                    <input class="api-navi-check" type="checkbox" />
+                </label>
             </div>
             <a download='api.xml' id='linkForSavingApi' hidden></a>
             <button class="api-button-download">
@@ -36,42 +44,11 @@
         </div>
         <div class="api-navi-body">
             @{
+
                 int i = 0;
-                List<string> methodsV3 = new List<string> { "epbs_np", "epbs_fp", "epbs_fp_events", "epbs_np_participants", "epbs_fp_participants", "epbs_fp_fin_sources_all",
-            "epbs_rp", "epbs_rp_participants", "epbs_rp_events", "epbs_document_types", "epbs_program", "epbs_bp_okei", "epbs_organization_roiv",
-            "epbs_rf_subject", "mu_np_tasks", "mu_np_purposes", "mu_np_fin_sources", "mu_fp_tasks", "mu_fp_results", "mu_fp_purposes", "mu_fp_fin_sources", "mu_fp_check_points",
-            "mu_fp_fin_sources_month", "mu_natgoal", "fp_results_other_project_new", "MuFpFinSourcesAll", "MuRpFinSourcesAll", "mu_rp_tasks", "mu_rp_purposes", "mu_rp_results",
-            "rp_results_other_project", "mu_rp_check_points", "mu_rp_fin_sources", "mu_rp_fin_sources_month",
-            
-            "checkpointsprivate", "resultsprivate", "projectfinprovisionoperativeprivate", "projectfinprovisiononreportprivate", "resultsfinprovisionreportprivate", "stateprivate", 
-            "monitoringfbfpprivate", "ziprivate", "agreementresultsprivate", "agreementpurposeprivate", "monitoringFpprivate", "monitoringRpprivate", "monitoringfbbaprivate", 
-            "gos_program_fpprivate", "gos_program_rpprivate", "eventsprivate", "parameterprivate", "agreementprivate", "results_subprivate", "heads_bkprivate", "evaluationassis_npprivate",
-            "evaluationassis_fpprivate", "mu_goalprivate", "mu_datasourceisprivate", "mu_socialsignificanceresultsprivate", "federal_districtprivate", "OMCheckpointsprivate", "OMPurposeprivate", "OMTasksprivate", "OMResultsprivate",
-            "OMRisksprivate", "npa_kindprivate", "mu_key_risksprivate", "mu_npfppurposecriteriaprivate", "mu_resultsprivate", "mu_checkpointsprivate", "epbs_program_rpprivate", 
-            "fbexecutionmonthlyprivate", "indicator_gosprograms_fpprivate", "epbs_subprogram_fpprivate", 
-            
-            "checkpointsprivate", "projectfinprovisionoperativeprivate", "projectfinprovisiononreportprivate", "npfppurposecriteriaprivate", "resultsprivate", "resultsfinprovisionreportprivate", "stateprivate", "resultsfinprovisionoperativeprivate",
-            "monitoringfbfpprivate", "npamountsprivate", "fpamountsprivate", "rpamountsprivate", "gos_program_fpprivate",
-        
-            "investment_projects","epbs_np", "epbs_np_tasks", "epbs_np_fin_sources", "epbs_np_purposes", "epbs_fp", "epbs_fp_tasks", "epbs_fp_results", "epbs_fp_check_points", 
-            "epbs_fp_events", "epbs_np_participants", "epbs_fp_participants", "epbs_fp_fin_sources", "epbs_fp_fin_sources_all", "epbs_fp_purposes", "epbs_rp", "epbs_rp_results", 
-            "epbs_rp_purposes", "epbs_rp_participants", "epbs_rp_check_points", "epbs_rp_events", "epbs_rp_fin_sources", "epbs_rp_all", "epbs_document_types", "epbs_program", 
-            "epbs_bp_okei", "epbs_organization_roiv", "epbs_rf_subject", "mu_np_tasks", "mu_np_purposes", "mu_np_fin_sources", "mu_fp_tasks", "mu_fp_results", "mu_fp_purposes", 
-            "mu_fp_fin_sources", "mu_fp_check_points", "mu_fp_fin_sources_month", "mu_natgoal", "fp_results_other_project_new", "MuFpFinSourcesAll", "MuRpFinSourcesAll", 
-            "mu_rp_tasks", "mu_rp_purposes", "mu_rp_results", "rp_results_other_project", "mu_rp_check_points", "mu_rp_fin_sources", "mu_rp_fin_sources_month", 
-            "register_projects_questions", "register_questions", "report_register_projects_questions", "changerequests_register_projects_questions",
+                var methods =  Model.GetAllMethods();
 
-            "checkpointsprivate", "projectfinprovisionoperativeprivate", "projectfinprovisiononreportprivate", "npfppurposecriteriaprivate", "resultsprivate", 
-            "resultsfinprovisionreportprivate", "resultsfinprovisionreport_rpprivate", "stateprivate", "resultsfinprovisionoperativeprivate", "monitoringfbfpprivate", 
-            "npamountsprivate", "fpamountsprivateprivate", "rpamountsprivateprivate", "ziprivate", "zi_rpprivate", "agreementresultsprivate", "agreementpurposeprivate", 
-            "direction_costsprivate", "type_resultsprivate", "type_checkpointsprivate", "monitoringFpprivate", "monitoringRpprivate", "monitoringfbbaprivate", "gos_program_fpprivate", 
-            "gos_program_rpprivate", "key_risksprivate", "eventsprivate", "key_parameterprivate", "agreementprivate", "results_subprivate", "heads_bkprivate", 
-            "evaluationassis_npprivate", "evaluationassis_fpprivate", "mu_goalprivate", "mu_datasourceisprivate", "mu_socialsignificanceresultsprivate", "federal_districtprivate", 
-            "OMCheckpointsprivate", "OMPurposeprivate", "OMTasksprivate", "OMResultsprivate", "OMRisksprivate", "npa_kindprivate", "mu_key_risksprivate", 
-            "mu_npfppurposecriteriaprivate", "mu_resultsprivate", "mu_checkpointsprivate", "mu_checkpoints_rpprivate", "epbs_program_rpprivate", "fbexecutionmonthlyprivate", 
-            "indicator_gosprograms_fpprivate", "epbs_subprogram_fpprivate", "monitoring_redistribution_reportprivate"};
-
-                foreach (var method in methodsV3)
+                foreach (var method in methods)
                 {
                     if (method.EndsWith("private"))
                     {
@@ -84,14 +61,15 @@
                     }
                     else
                     {
-                        <label class="api-navi-body-el-text">
-                            <input class="api-input-methodname" type="checkbox" value="@method" id="input-method-@i">
-                            @method
+                        <label class= "api-navi-body-el-text" >
+                        <input class= "api-input-methodname" type = "checkbox" value = "@method" id = "input-method-@i" >
+                                @method
                         </label>
                     }
                 }
 
             }
+
 
             <div class="api-navi-body-el">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,20 +95,16 @@
                     document.getElementById('gallery-cell-api-0').innerText = 'Файл загружается, подождите ...';
                     var numberOfMethods = document.getElementsByClassName("api-input-methodname");
                     var numberOfVersion = document.getElementsByClassName("api-navi-check");
-                    //let listOfResponces = [];
                     let i = 0;
                     do {
                         if (numberOfMethods[i].checked == true) {
                             for (let j = 0; j < numberOfVersion.length - 1; j++) {
                                 if (numberOfVersion[j].checked == true) {
-                                    console.log(numberOfMethods[i].alt);
-                                    console.log(numberOfVersion[j]);
                                     if (numberOfMethods[i].alt == "private") {
                                         await fetchload(numberOfMethods[i].value.toString(), listOfResponces, j + 1, true);
                                     } else {
                                         await fetchload(numberOfMethods[i].value.toString(), listOfResponces, j + 1, false);
                                     }
-
                                 }
                             }
                         }
@@ -163,7 +137,7 @@
                     console.log(result);
 
                     let answer = await result.apiXml
-                    let xmlToSave = new XmlBeautify().beautify(answer, { indent: '&nbsp; &nbsp; &nbsp;', useSelfClosingElement: true }).toString();
+                    let xmlToSave = new XmlBeautify().beautify(answer, { indent: '\u00A0 \u00A0 \u00A0', useSelfClosingElement: true }).toString();
                     console.log("Получение ответа в json...");
                     console.log(answer);
                     console.log(xmlToSave);
@@ -173,10 +147,8 @@
 
                     if (responce.ok) {
                         console.log("Всё в ок.");
-                        //alert("Всё ок.");
                     } else {
                         console.log("Что-то не так.");
-                        alert("Что-то не так.");
                     }
                 }
                 if (document.location.search.match(/type=embed/gi)) {
@@ -210,7 +182,7 @@
             <div class="gallery js-flickity flickity-enabled is-draggable" data-flickity-options="{ &quot;wrapAround&quot;: true }" tabindex="0">
                 @for (int j = 0; j < 10; j++)
                 {
-                    <div class="gallery-cell" style="font-size: 1em" id="gallery-cell-api-@j">@j+@j</div>
+                    <div class="gallery-cell" style="font-size: 1em" id="gallery-cell-api-@j"></div>
                 }
             </div>
             <script src="../js/flickity.js"></script>
