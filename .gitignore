@@ -95,7 +95,9 @@ packages/*
 /paket.lock
 *.DotSettings.user
 
-*.cache
-*.props
-*.json
-**/obj
+**/.cache
+**/.editorconfig
+**/.cache
+**/.json
+**/.props
+**/.info
