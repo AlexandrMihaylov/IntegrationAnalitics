@@ -13,7 +13,7 @@
         <div class="stack">
             <button id="stack" class="validation-button panel-button-rectangle" onclick="
                  async function validation(){
-                    let method = 'https://localhost:7067/validation/validationxml';
+                    let method = 'https://localhost:7069/validation/validationxml';
                     let xsd = await document.getElementById('test2').value;
                     let xml = await document.getElementById('test').value;
                     params = await ('?' + 'Xsd=' + xsd + '&Xml=' + xml);
