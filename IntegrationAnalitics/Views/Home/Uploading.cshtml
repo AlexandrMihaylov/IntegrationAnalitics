@@ -209,130 +209,89 @@
             </div>
             <div class="doc-ver"><label class="navi-block-label">Версия документа</label></div>
             <div class="doc-ver-list smev-button-download">
+                
                 <!--<input class="navi-block-brow" list="doc-ver-list">
                 <datalist id="doc-ver-list">
                     <option value="1"></option>
                     <option value="2"></option>
                     <option value="3"></option>
                 </datalist>-->
-                <input class="ver-list-input ver-list-template"  value="1.13.0"/>
-                <select id="doc-ver-list"><!--onchange="console.log(this.options[this.selectedIndex].value)"-->
-                    <option value="1">raz</option>
-                    <option value="2">dva</option>
-                    <option value="3">tri</option>
+                
+                <input class="ver-list-input ver-list-template" value="1.13.0"/>
+                <select id="doc-ver-list" onchange="document.getElementsByClassName('ver-list-input')[0].value = this.options[this.selectedIndex].value"><!-- text -->
+                    @{ var documentVersionList = Model.GetAllDocumentVersions();
+                        int index = 0;
+                        foreach (string documentVersion in documentVersionList)
+                        {<option value=@index>@documentVersion</option>
+                            index++;}}
                 </select>
             </div>
             <div class="doc-num"><label class="navi-block-label">Номер документа</label></div>
             <div class="doc-num-list smev-button-download">
                 <input class="num-list-input ver-list-template" value="148"/><!--<input class="navi-block-brow" list="doc-num-list">-->
                 <select id="doc-num-list" class="num-list-select">
-                    <option value="1">raz</option>
-                    <option value="2">dva</option>
-                    <option value="3">tri</option>
+                    @{ var documentNumberList = Model.GetAllDocumentNumbers();
+                        int indexDocumentNumber = 0;
+                        foreach (string documentNumber in documentNumberList)
+                        {<option value=@indexDocumentNumber>@documentNumber</option>
+                            indexDocumentNumber++;}}
                 </select>
             </div>
             <div class="doc-type"><label class="navi-block-label">Тип документа</label></div>
             <div class="doc-type-list smev-button-download">
                 <input class="type-list-input ver-list-template" value="9"/><!--<input class="navi-block-brow" list="doc-type-list">-->
-                <!--<script src="/js/documentTypeListFiller.js"></script>-->
-                <body onload="
-                    async function documentTypeListFiller() {
-                    let documentTypeList = 
-                    [
-                    '«00» - Перечень документов',
-                    '«6» -  Расчет базовых БА (базовых бюджетных ассигнований - подписываемая часть)',
-                    '«7» -  Расчет базовых БА (базовых бюджетных ассигнований - не подписываемая часть)',                        
-                    '«8» -  Расчет базовых БА с Доп. БА (подписываемая часть)',
-                    '«9» -  Расчет базовых БА с Доп. БА (не подписываемая часть)',                      
-                    '«10» - Паспорт проекта (подписываемая часть)',
-                    '«11» - Паспорт проекта (не подписываемая часть)',
-                    '«14» - Комплексный тип документа паспорт инфраструктурного проекта',
-                    '«20» - Рабочий план',
-                    '«21» - Запрос на изменение рабочего плана',
-                    '«30» - Отчет о ходе реализации национального проекта',
-                    '«31» - Отчет о ходе реализации федерального (регионального) проекта',
-                    '«32» - Отчет о ходе реализации паспортов проектов и вопросов', 
-                    '«33» - Исполнения НП,ФП,РП',
-                    '«34» - Аналитический отчет',                        
-                    '«40» - Запрос на изменение',
-                    '«41» - Не примененный запрос на изменение',
-                    '«42» - Запрос на изменение паспортов проектов и вопросов',                           
-                    '«50» - Документ паспортов проектов и вопросов',
-                    '«60» - Документ паспорт инвестиционного проекта',
-                    '«70» - справочник «Типовые результаты и типовые КТ»',                        
-                    '«110» - Перечень паспортов государственных программ',
-                    '«120» - Паспорт государственной программы',
-                    '«121» - Редакция паспорта государственной программы',
-                    '«130» - Перечень паспортов ведомственных проектов',
-                    '«140» - Паспорт ведомственного проекта',
-                    '«141» - Редакция паспорта ведомственного проекта',
-                    '«150» - Перечень паспортов комплексов процессных мероприятий',
-                    '«160» - Паспорт комплекса процессных мероприятий',
-                    '«161» - Редакция паспорта комплекса процессных мероприятий',
-                    '«170» - Маркировка элементов государственной программы',
-                    '«180» - Маркировка элементов ведомственного проекта',
-                    '«190» - Маркировка элементов комплекса процессных мероприятий',
-                    '«200» - Единый запрос на изменение',
-                    '«201» - Предложение на изменение ГП',
-                    '«202» - Предложение на изменение ВП',
-                    '«203» - Предложение на изменение КПМ',
-                    '«205» - Дополнение к Единому запросу на изменение',
-                    '«210» - Перечень отчетов о ходе реализации ведомственного проекта',
-                    '«220» - Отчет о ходе реализации ведомственного проекта',
-                    '«221» - Сведения об исполнение ведомственного проекта',
-                    '«230» - Перечень отчетов о ходе реализации государственной программы',
-                    '«240» - Отчет о ходе реализации ГП',
-                    '«241» - Сведения об исполнении государственной программы',
-                    '«250» - Перечень отчетов о ходе реализации комплекса процессных мероприятий',
-                    '«260» - Отчет о ходе реализации КПМ',
-                    '«261» - Сведения об исполнение комплекса процессных мероприятий',
-                    '«270» - Единый аналитический план'
-                    ];
-                    for (let i = 0; i < documentTypeList.length; i++) {
-                       let s = documentTypeList[i];
-                       let res = s.split('«')[1];
-                       let resp = res.split('»')[0];
-                       await document.getElementById('doc-type-list').insertAdjacentHTML('beforeend', '<option value=&quot;' + resp + '&quot;>' + documentTypeList[i] + '</option>');
-                    };
-                    };
-                    documentTypeListFiller();
-                "></body>
-                <select id="doc-type-list" onchange="document.getElementsByClassName('type-list-input')[0].value = this.options[this.selectedIndex].value"></select>
+                <select id="doc-type-list" onchange="document.getElementsByClassName('type-list-input')[0].value = this.options[this.selectedIndex].value">
+                    @{ var documentTypeList = Model.GetAllDocumentTypes();
+                        int indexDocumentType = 0;
+                        foreach (string documentType in documentTypeList)
+                        {
+                            <option value=@indexDocumentType>@documentType</option>
+                            indexDocumentType++;
+                        }}
+                </select>
             </div>
             <div class="type"><label class="navi-block-label">Тип(Type)</label></div>
             <div class="type-list smev-button-download">
                 <input class="typetype-list-input ver-list-template" value="1"/><!--<input class="navi-block-brow" list="type-list">-->
                 <select id="type-list">
-                    <option value="1">raz</option>
-                    <option value="2">dva</option>
-                    <option value="3">tri</option>
+                    @{ var types = Model.GetAllTypeTypes();
+                        int indexTypes = 0;
+                        foreach (string type in types)
+                        {<option value=@indexTypes>@type</option>
+                            indexTypes++;}}
                 </select>
             </div>
             <div class="subj-code"><label class="navi-block-label">Код субъекта</label></div>
             <div class="subj-code-list smev-button-download">
                 <input class="subj-code-input ver-list-template" value="2"/><!--<input class="navi-block-brow" list="subj-code-list">-->
                 <select id="subj-code-list">
-                    <option value="1">raz</option>
-                    <option value="2">dva</option>
-                    <option value="3">tri</option>
+                    @{ var subjectCodes = Model.GetAllSubjectCodes();
+                        int indexSubjectCode = 0;
+                        foreach (string subjectCode in subjectCodes)
+                        {<option value=@indexSubjectCode>@subjectCode</option>
+                            indexSubjectCode++;}}
                 </select>
             </div>
             <div class="time"><label class="navi-block-label">Время</label></div>
             <div class="time-list smev-button-download">
                 <input class="time-list-input ver-list-template" value="3"/><!--<input class="navi-block-brow" list="time-list">-->
                 <select id="time-list">
-                    <option value="1">raz</option>
-                    <option value="2">dva</option>
-                    <option value="3">tri</option>
+                    @{ var times = Model.GetAllTimes();
+                        int indexTime = 0;
+                        foreach (string time in times)
+                        {<option value=@indexTime>@time</option>
+                            indexTime++;}}
                 </select>
             </div>
             <div class="base64-format"><label class="navi-block-label">Base64 формат</label></div>
             <div class="base64-format-list smev-button-download">
                 <input class="base64-format-input ver-list-template" value="4"/><!--<input class="navi-block-brow" list="base64-format-list">-->
                 <select id="base64-format-list">
-                    <option value="1">raz</option>
-                    <option value="2">dva</option>
-                    <option value="3">tri</option>
+                    @{ var formats = Model.GetAllBase64Formats();
+                        int indexFormat = 0;
+                        foreach (string format in formats)
+                        {<option value=@indexFormat>@format</option>
+                            indexFormat++;}}
                 </select>
             </div>
             <div class="cell-smev-button-download">
